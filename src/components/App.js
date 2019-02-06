@@ -29,7 +29,8 @@ class App extends Component {
     }
 
     const request = async () => {
-      const data = await (await fetch('https://yesno.wtf/api')).json();
+      const response = await fetch('https://yesno.wtf/api');
+      const data = await response.json();
       this.setState(() => ({ print: true, data: {...data}}));
     }
     request();
