@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import Form from './Form';
 import Answer from './Answer';
 
+const DEFAULT_STATE = {
+  print: false,
+  data: {}
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleData = this.handleData.bind(this);
     
-    this.state={ print: false, data: {} }
+    this.state={ ...DEFAULT_STATE }
   }
 
   handleFormSubmit = (e) => {
@@ -23,29 +28,21 @@ class App extends Component {
       return;
     }
 
-    try {
-      fetch('https://yesno.wtf/api')
-        .then((response) => response.json())
-        .then((data) => {
-          this.setState(() => ({ data: {...data}}));
-          this.setState(() => ({ print: true}));
-        });
-    } catch(e) {
-      console.log(e);
+    const request = async () => {
+      const data = await (await fetch('https://yesno.wtf/api')).json();
+      this.setState(() => ({ print: true, data: {...data}}));
     }
+    request();
   }
 
-  handleData = () => {
-    this.setState(() => ({ data: {} }));
-    this.setState(() => ({ print: false}));
-  }
+  handleData = () => this.setState(() => ({ ...DEFAULT_STATE }));
 
   render() {
     return (
       <div className="app">
         <div className="container">
           <Form handleFormSubmit={this.handleFormSubmit}/>
-          { this.state.print === true &&
+          { this.state.print &&
             <Answer 
               handleData={this.handleData} 
               data={this.state.data} 
