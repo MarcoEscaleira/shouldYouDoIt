@@ -1,0 +1,27 @@
+.answer {
+  display: flex;
+  flex-direction: column;
+  margin-top: $l-size;
+}
+
+.answer h1 {
+  color: $lightest;
+  border-left: 0.3rem solid darken($lightest, 20%);
+  border-right: 0.3rem solid darken($lightest, 20%);
+  padding-left: $m-size;
+  text-align: center;
+  margin-bottom: $xl-size;
+}
+
+.answer img {
+  min-height: 40rem;
+  margin-bottom: $l-size;
+}
+
+.answer button {
+  background-color: $third_dark;
+  height: $xl-size;
+  color: #ffffff;
+  border: none;
+  border-bottom: 0.4rem solid darken($third_dark, 20%);
+}

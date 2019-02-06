@@ -1,0 +1,33 @@
+.questionForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.questionForm h1 {
+  color: $sixth_light;
+  font-size: $xl-size;
+}
+
+.uselessForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uselessForm input {
+  flex-grow: 1;
+  background-color: $second_dark;
+  border: none;
+  color: #ffffff;
+  padding: $s-size;
+}
+
+.uselessForm button {
+  background-color: $fourth_dark;
+  border: none;
+  border-bottom: 0.3rem solid darken($sixth_light, 10%);
+  color: #ffffff;
+  font-weight: 500;
+  padding: $s-size;
+  margin-left: $m-size;
+}
