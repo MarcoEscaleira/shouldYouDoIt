@@ -23,7 +23,7 @@ class App extends Component {
       this.handleData();
     }
     
-    if (e.target.toDo.value === '') {
+    if (!e.target.toDo.value) {
       alert("Please enter what you want to do");
       return;
     }
