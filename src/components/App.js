@@ -5,6 +5,7 @@ import Answer from './Answer';
 const DEFAULT_STATE = {
   print: false,
   data: {},
+  oldTextInput: '',
   textInput: ''
 }
 
@@ -27,6 +28,11 @@ class App extends Component {
       return;
     }
 
+    if (this.state.oldTextInput === inputText) {
+      alert("Please do another thing!");
+      return;
+    }
+
     this.setState(() => ({ print: true, data: {
       "answer" : "loading",
       "image": "./gifs/Blocks-1s.gif"
@@ -34,7 +40,7 @@ class App extends Component {
     const request = async () => {
       const response = await fetch('https://yesno.wtf/api');
       const data = await response.json();
-      this.setState(() => ({ print: true, data: {...data}}));
+      this.setState(() => ({ print: true, data: {...data}, oldTextInput: inputText}));
     }
     request();
   }
