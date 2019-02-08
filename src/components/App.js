@@ -39,7 +39,7 @@ class App extends Component {
       "image": "./gifs/Blocks-1s-200px.gif"
     } }));
     const request = async () => {
-      const response = await fetch('https://yesno.wtf/api');
+      const response = await fetch('https://shouldyoudoit.herokuapp.com/');
       const data = await response.json();
       this.setState(() => ({ print: true, data, oldTextInput: inputText }));
     }
