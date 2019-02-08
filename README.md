@@ -1,3 +1,4 @@
-# A small project based on *React.js* using the REST API https://yesno.wtf/#api
+## A small project based on *React.js* using the 
+REST API: https://shouldyoudoit.herokuapp.com/ / https://github.com/MarceloSilva00/shouldYouDoIt_BE
 
-## Deployed here: https://shouldyoudoit.netlify.com/
+### Deployed here: https://shouldyoudoit.netlify.com/
