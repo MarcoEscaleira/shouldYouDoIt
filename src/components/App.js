@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import Answer from './Answer';
+import ErrorModal from './ErrorModal';
 
 const DEFAULT_STATE = {
   print: false,
   data: {},
   oldTextInput: '',
-  textInput: ''
+  textInput: '',
+  typeError: {
+    status: false,
+    text: ''
+  }
 }
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.handleData = this.handleData.bind(this);
-    
-    this.state={ ...DEFAULT_STATE }
+  state = {
+    ...DEFAULT_STATE
   }
 
   handleFormSubmit = (e) => {
@@ -23,21 +24,25 @@ class App extends Component {
     
     const inputText = e.target.toDo.value;
 
+    // Check if input is empty
     if (!inputText) {
-      alert("Please enter what you want to do");
       this.handleData();
+      this.activateTypeError("Please enter what you want to do");
       return;
     }
 
+    // Check if input is same as before
     if (this.state.oldTextInput === inputText) {
-      alert("Please do another thing!");
+      this.activateTypeError("Please do another thing!");
       return;
     }
 
+    //Loading animation 
     this.setState(() => ({ print: true, data: {
-      "answer" : "loading",
+      "answer": "loading",
       "image": "./gifs/Blocks-1s-200px.gif"
     } }));
+    
     const request = async () => {
       const response = await fetch('https://shouldyoudoit.herokuapp.com/');
       const data = await response.json();
@@ -52,6 +57,14 @@ class App extends Component {
     const textInput = e.target.value;
     this.setState(() => ({ textInput }));
   };
+
+  activateTypeError = (text) => {
+    this.setState(() => ({ typeError: { status: true, text } }));
+  }
+
+  handleTypeError = () => {
+    this.setState(() => ({ typeError: { status: false } }));
+  }
 
   render() {
     return (
@@ -69,6 +82,10 @@ class App extends Component {
             />
           }
         </div>
+        <ErrorModal 
+          handleTypeError={this.handleTypeError} 
+          typeError={this.state.typeError} 
+        />
       </div>
     );
   }
