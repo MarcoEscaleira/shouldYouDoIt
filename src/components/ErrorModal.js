@@ -7,6 +7,7 @@ const ErrorModal = ({handleTypeError, typeError: { status, text }}) => (
     onRequestClose={handleTypeError}
     contentLabel='Error'
     className="modal"
+    ariaHideApp={false}
   >
     <h3 className="modal__title">Error</h3>
     { text && <p className="modal__body">{text}</p>}
