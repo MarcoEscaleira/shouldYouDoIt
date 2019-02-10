@@ -4,7 +4,7 @@
   margin-top: $l-size;
 }
 
-.answer h1 {
+.answer__title {
   color: $lightest;
   border-left: 0.3rem solid darken($lightest, 20%);
   border-right: 0.3rem solid darken($lightest, 20%);
@@ -13,15 +13,14 @@
   margin-bottom: $xl-size;
 }
 
-.answer img {
+.answer__image{
   min-height: 40rem;
   margin-bottom: $l-size;
 }
 
-.answer button {
+.answer__btn {
   background-color: $third_dark;
   height: $xl-size;
   color: #ffffff;
   border: none;
-  border-bottom: 0.4rem solid darken($third_dark, 20%);
 }

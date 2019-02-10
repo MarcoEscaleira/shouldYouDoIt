@@ -4,17 +4,17 @@
   flex-direction: column;
 }
 
-.questionForm h1 {
+.questionForm__title {
   color: $sixth_light;
   font-size: $xl-size;
 }
 
-.uselessForm {
+.questionForm__form {
   display: flex;
   justify-content: space-between;
 }
 
-.uselessForm input {
+.questionForm__form__input {
   flex-grow: 1;
   background-color: $second_dark;
   border: none;
@@ -22,10 +22,9 @@
   padding: $s-size;
 }
 
-.uselessForm button {
+.questionForm__form__btn {
   background-color: $fourth_dark;
   border: none;
-  border-bottom: 0.3rem solid darken($sixth_light, 10%);
   color: #ffffff;
   font-weight: 500;
   padding: $s-size;
