@@ -6,12 +6,13 @@
 
 .questionForm__title {
   color: $sixth_light;
-  font-size: $xl-size;
+  font-size: $l-size;
 }
 
 .questionForm__form {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .questionForm__form__input {
@@ -28,5 +29,19 @@
   color: #ffffff;
   font-weight: 500;
   padding: $s-size;
-  margin-left: $m-size;
+  margin: $m-size 0 0 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .questionForm__title {
+    font-size: $xl-size;
+  }
+
+  .questionForm__form {
+    flex-direction: row;
+  }
+
+  .questionForm__form__btn {
+    margin: 0 0 0 $m-size;
+  }
 }
