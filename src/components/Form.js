@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const Form = (props) => (
   <div className="questionForm">
-    <h1>What do you want to do?</h1>
+    <h1 className="questionForm__title">What do you want to do?</h1>
     <form 
-      className="uselessForm" 
+      className="questionForm__form" 
       onSubmit={props.handleFormSubmit} 
       autoComplete="off"
     >
@@ -13,9 +13,14 @@ const Form = (props) => (
         type="text" 
         name="toDo" 
         value={props.text} 
-        onChange={props.handleTextInput} 
+        onChange={props.handleTextInput}
+        className="questionForm__form__input"
       />
-      <button type="submit">Decide</button>
+      <button 
+        type="submit" className="questionForm__form__btn"
+      >
+        Decide
+      </button>
     </form>
   </div>
 );
