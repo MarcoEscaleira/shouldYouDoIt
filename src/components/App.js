@@ -9,7 +9,7 @@ const DEFAULT_STATE = {
   oldTextInput: '',
   textInput: '',
   typeError: {
-    status: false,
+    showModal: false,
     text: ''
   }
 }
@@ -18,22 +18,25 @@ class App extends Component {
   state = {
     ...DEFAULT_STATE
   }
-
+  
   handleFormSubmit = (e) => {
     e.preventDefault();
+
+    this.handleData();
     
     const inputText = e.target.toDo.value;
 
     // Check if input is empty
     if (!inputText) {
-      this.handleData();
-      this.activateTypeError("Please enter what you want to do");
+      this.handleState();
+      this.handleTypeError("Please enter what you want to do");
       return;
     }
 
     // Check if input is same as before
     if (this.state.oldTextInput === inputText) {
-      this.activateTypeError("Please do another thing!");
+      this.handleState();
+      this.handleTypeError("Please do another thing!");
       return;
     }
 
@@ -51,20 +54,28 @@ class App extends Component {
     request();
   }
 
-  handleData = () => this.setState(() => ({ ...DEFAULT_STATE }));
+  handleState = () => this.setState(() => ({ ...DEFAULT_STATE }));
+  
+  handleData = () => this.setState(() => ({ data: {} }));
+
+  handleTypeError = (text = '') => this.setState(() => ({
+    typeError: {
+      showModal: true,
+      text
+    }
+  }));
+
+  closeTypeError = () => this.setState(() => ({
+    typeError: {
+      showModal: false,
+      text: ''
+    }
+  }));
 
   handleTextInput = (e) => {
     const textInput = e.target.value;
     this.setState(() => ({ textInput }));
   };
-
-  activateTypeError = (text) => {
-    this.setState(() => ({ typeError: { status: true, text } }));
-  }
-
-  handleTypeError = () => {
-    this.setState(() => ({ typeError: { status: false } }));
-  }
 
   render() {
     return (
@@ -77,14 +88,15 @@ class App extends Component {
           />
           { this.state.print &&
             <Answer 
-              handleData={this.handleData} 
+              handleData={this.handleState} 
               data={this.state.data} 
             />
           }
         </div>
         <ErrorModal 
-          handleTypeError={this.handleTypeError} 
-          typeError={this.state.typeError} 
+          show={this.state.typeError.showModal}
+          text={this.state.typeError.text}
+          closeCallback= {this.closeTypeError}
         />
       </div>
     );
