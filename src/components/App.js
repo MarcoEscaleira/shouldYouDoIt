@@ -1,43 +1,51 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import Answer from './Answer';
+import ErrorModal from './ErrorModal';
 
 const DEFAULT_STATE = {
   print: false,
   data: {},
   oldTextInput: '',
-  textInput: ''
+  textInput: '',
+  typeError: {
+    showModal: false,
+    text: ''
+  }
 }
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.handleData = this.handleData.bind(this);
-    
-    this.state={ ...DEFAULT_STATE }
+  state = {
+    ...DEFAULT_STATE
   }
-
+  
   handleFormSubmit = (e) => {
     e.preventDefault();
+
+    this.handleData();
     
     const inputText = e.target.toDo.value;
 
+    // Check if input is empty
     if (!inputText) {
-      alert("Please enter what you want to do");
-      this.handleData();
+      this.handleState();
+      this.handleTypeError("Please enter what you want to do");
       return;
     }
 
+    // Check if input is same as before
     if (this.state.oldTextInput === inputText) {
-      alert("Please do another thing!");
+      this.handleState();
+      this.handleTypeError("Please do another thing!");
       return;
     }
 
+    //Loading animation 
     this.setState(() => ({ print: true, data: {
-      "answer" : "loading",
+      "answer": "loading",
       "image": "./gifs/Blocks-1s-200px.gif"
     } }));
+    
     const request = async () => {
       const response = await fetch('https://shouldyoudoit.herokuapp.com/');
       const data = await response.json();
@@ -46,7 +54,23 @@ class App extends Component {
     request();
   }
 
-  handleData = () => this.setState(() => ({ ...DEFAULT_STATE }));
+  handleState = () => this.setState(() => ({ ...DEFAULT_STATE }));
+  
+  handleData = () => this.setState(() => ({ data: {} }));
+
+  handleTypeError = (text = '') => this.setState(() => ({
+    typeError: {
+      showModal: true,
+      text
+    }
+  }));
+
+  closeTypeError = () => this.setState(() => ({
+    typeError: {
+      showModal: false,
+      text: ''
+    }
+  }));
 
   handleTextInput = (e) => {
     const textInput = e.target.value;
@@ -64,11 +88,16 @@ class App extends Component {
           />
           { this.state.print &&
             <Answer 
-              handleData={this.handleData} 
+              handleData={this.handleState} 
               data={this.state.data} 
             />
           }
         </div>
+        <ErrorModal 
+          show={this.state.typeError.showModal}
+          text={this.state.typeError.text}
+          closeCallback= {this.closeTypeError}
+        />
       </div>
     );
   }
