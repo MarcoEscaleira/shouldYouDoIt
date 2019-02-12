@@ -4,3 +4,9 @@
   margin: 0 auto;
   padding: 0 $m-size;
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .container {
+    margin: 2rem auto;
+  }
+}

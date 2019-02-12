@@ -29,6 +29,6 @@ Form.propTypes = {
   handleFormSubmit: PropTypes.func,
   text: PropTypes.string,
   handleTextInput: PropTypes.func
-}
+};
 
 export default Form;

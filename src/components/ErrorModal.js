@@ -22,6 +22,6 @@ ErrorModal.propTypes = {
   show: PropTypes.bool,
   text: PropTypes.string,
   closeCallback: PropTypes.func
-}
+};
 
 export default ErrorModal;

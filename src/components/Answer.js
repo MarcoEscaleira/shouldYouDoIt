@@ -21,6 +21,6 @@ const Answer = ({handleData, data: {answer, image}}) => (
 Answer.propTypes = {
   handleData: PropTypes.func,
   data: PropTypes.object
-}
+};
 
 export default Answer;
