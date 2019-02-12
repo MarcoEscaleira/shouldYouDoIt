@@ -10,7 +10,7 @@ const Answer = ({handleData, data: {msg, img}}) => (
     <h1 className="answer__title">{ (msg === 'loading') ? "Loading" : handleMsg(msg) }</h1>
     <img 
       src={img}
-      alt="Should You Do It image"
+      alt="Should You Do It gif"
       className="answer__image"
     />
     <button 
