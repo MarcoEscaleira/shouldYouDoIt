@@ -42,8 +42,8 @@ class Home extends Component {
 
     //Loading animation 
     this.setState(() => ({ print: true, data: {
-      "answer": "loading",
-      "image": "./gifs/Blocks-1s-200px.gif"
+      "msg": "loading",
+      "img": "./gifs/Blocks-1s-200px.gif"
     } }));
     
     const request = async () => {

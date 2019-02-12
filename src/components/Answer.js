@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const Answer = ({handleData, data: {answer, image}}) => (
+const Answer = ({handleData, data: {msg, img}}) => (
   <div className="answer">
-    <h1 className="answer__title">{ (answer === 'loading') ? "Loading" : (answer === 'yes') ? "Do it" : "Don't do it" }</h1>
+    <h1 className="answer__title">{ (msg === 'loading') ? "Loading" : msg }</h1>
     <img 
-      src={image} 
+      src={img}
       alt="yesOrNoApiImage"
       className="answer__image"
     />
