@@ -12,12 +12,12 @@ const DEFAULT_STATE = {
     showModal: false,
     text: ''
   }
-}
+};
 
-class App extends Component {
+class Home extends Component {
   state = {
     ...DEFAULT_STATE
-  }
+  };
   
   handleFormSubmit = (e) => {
     e.preventDefault();
@@ -28,14 +28,14 @@ class App extends Component {
 
     // Check if input is empty
     if (!inputText) {
-      this.handleState();
+      this.handleData();
       this.handleTypeError("Please enter what you want to do");
       return;
     }
 
     // Check if input is same as before
     if (this.state.oldTextInput === inputText) {
-      this.handleState();
+      this.handleData();
       this.handleTypeError("Please do another thing!");
       return;
     }
@@ -50,13 +50,16 @@ class App extends Component {
       const response = await fetch('https://shouldyoudoit.herokuapp.com/');
       const data = await response.json();
       this.setState(() => ({ print: true, data, oldTextInput: inputText }));
-    }
+    };
     request();
-  }
+  };
 
   handleState = () => this.setState(() => ({ ...DEFAULT_STATE }));
   
-  handleData = () => this.setState(() => ({ data: {} }));
+  handleData = () => this.setState(() => ({ 
+    print: false,
+    data: {}
+  }));
 
   handleTypeError = (text = '') => this.setState(() => ({
     typeError: {
@@ -103,4 +106,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
