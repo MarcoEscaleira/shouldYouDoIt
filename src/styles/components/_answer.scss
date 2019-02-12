@@ -1,7 +1,7 @@
 .answer {
   display: flex;
   flex-direction: column;
-  margin-top: $l-size;
+  margin-top: $s-size;
 }
 
 .answer__title {
@@ -10,12 +10,12 @@
   border-right: 0.3rem solid darken($lightest, 20%);
   padding-left: $m-size;
   text-align: center;
-  margin-bottom: $xl-size;
+  margin-bottom: $m-size;
 }
 
 .answer__image{
   min-height: 40rem;
-  margin-bottom: $l-size;
+  margin-bottom: $m-size;
 }
 
 .answer__btn {
@@ -23,4 +23,18 @@
   height: $xl-size;
   color: #ffffff;
   border: none;
+}
+
+@media(min-width: $desktop-breakpoint) {
+  .answer {
+    margin-top: $m-size;
+  }
+
+  .answer__title {
+    margin-bottom: $l-size;
+  }
+
+  .answer__image{
+    margin-bottom: $m-size;
+  }
 }
