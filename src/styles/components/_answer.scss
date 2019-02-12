@@ -14,7 +14,7 @@
 }
 
 .answer__image{
-  min-height: 40rem;
+  height: 30rem;
   margin-bottom: $m-size;
 }
 
@@ -35,6 +35,7 @@
   }
 
   .answer__image{
+    height: 40rem;
     margin-bottom: $m-size;
   }
 }
