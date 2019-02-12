@@ -47,7 +47,11 @@ class Home extends Component {
     } }));
     
     const request = async () => {
-      const response = await fetch('https://shouldyoudoit.herokuapp.com/');
+      const response = await fetch(`https://shouldyoudoit.herokuapp.com/?search=${inputText}`, {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      });
       const data = await response.json();
       this.setState(() => ({ print: true, data, oldTextInput: inputText }));
     };
