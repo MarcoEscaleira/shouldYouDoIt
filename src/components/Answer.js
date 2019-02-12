@@ -1,13 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const handleMsg = (str) => {
-    return str.toLowerCase().replace(/^[a-z]{1}/igm, (m) => { return m.toUpperCase() });
-};
-
 const Answer = ({handleData, data: {msg, img}}) => (
   <div className="answer">
-    <h1 className="answer__title">{ (msg === 'loading') ? "Loading" : handleMsg(msg) }</h1>
+    <h1 className="answer__title">{ (msg === 'loading') ? "Loading" : msg }</h1>
     <img 
       src={img}
       alt="Should You Do It gif"
