@@ -24,7 +24,7 @@ class Home extends Component {
 
     this.handleData();
     
-    const inputText = e.target.toDo.value;
+    const inputText = e.target.toDo.value.trim();
 
     // Check if input is empty
     if (!inputText) {
