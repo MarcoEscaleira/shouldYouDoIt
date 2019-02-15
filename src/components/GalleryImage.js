@@ -5,7 +5,8 @@ const GalleryImage = ({answer: {msg, img}}) => (
     <img 
       src={img} 
       alt="gallery img"
-      className="gallery__showcase__img"></img>
+      className="gallery__showcase__img" 
+    />
   </li>
 );
 
