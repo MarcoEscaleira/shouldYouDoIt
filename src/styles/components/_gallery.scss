@@ -1,0 +1,37 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__title {
+  margin-top: $m-size;
+  text-align: center;
+  color: $sixth_light;
+  letter-spacing: 0.2rem;
+}
+
+.gallery__showcase {
+  list-style: none;
+  margin: 0px auto;
+  padding: 10px;
+  display: block;
+  max-width: 78rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery__showcase__img {
+  width: 23rem;
+  height: 20rem;
+  margin: 1rem;
+}
+
+.showcase__title {
+  width: 40rem;
+  margin: $m-size auto;
+  text-align: center;
+  color: $second_light;
+  border-bottom: $middle_color solid 0.1rem;
+  padding-bottom: $s-size;
+}

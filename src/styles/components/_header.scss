@@ -17,26 +17,26 @@
   font-size: $s-size;
 }
 
-.header__nav__title {
+.nav__title {
   font-size: $m-size;
   font-weight: 300;
   color: $fifth_light;
 }
 
-.header__nav__title__span {
+.nav__title__span {
   color: $second_light;
   font-weight: 600;
 }
 
-.header__ul {
+.nav__ul {
   display: flex;
 }
 
-.header__ul__li {
+.nav__ul__li {
   list-style: none;
 }
 
-.header__ul__li__link {
+.nav__ul__li__link {
   padding: 1rem 0;
   margin: 0 2rem;
   position: relative;
@@ -44,11 +44,11 @@
   color: $lightest;
 }
 
-.header__ul__li__link:last-child {
+.nav__ul__li__link:last-child {
   margin-right: 0; 
 }
 
-.header__ul__li__link:hover {
+.nav__ul__li__link:hover {
   border-top: $fifth_light 0.1rem solid;
   border-bottom: $fifth_light 0.1rem solid;
 }
@@ -58,7 +58,7 @@
     height: 6rem;
   }
 
-  .header__nav__title {
+  .nav__title {
     font-size: $l-size;
   }
 }
