@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from '../components/HomePage';
 import GalleryPage from '../components/GalleryPage';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import NotFound from '../components/NotFound';
 
 const AppRouter = () => (
@@ -15,6 +16,7 @@ const AppRouter = () => (
         <Route path="/gallery" component={GalleryPage} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </Fragment>
   </BrowserRouter>
 )

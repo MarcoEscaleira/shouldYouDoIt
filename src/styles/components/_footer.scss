@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  padding-top: 2rem;
+}
+
+.footer__message {
+  margin: 0 auto;
+  padding-top: 2rem; 
+  color: $second_light;
+  align-items: center;
+}
+
+.message--red {
+  color: red;
+}
+
+.message__name {
+  text-decoration: underline;
+  letter-spacing: 0.15rem;
+  color: $second_light;
+  font-weight: 500;
+}
+
+@media(min-width: $desktop-breakpoint) {
+  .footer {
+    padding-top: 0rem;
+  }
+}

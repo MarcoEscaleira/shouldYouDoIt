@@ -19,17 +19,28 @@
   flex-grow: 1;
   background-color: $second_dark;
   border: none;
+  border-radius: 1rem;
   color: #ffffff;
   padding: $s-size;
+}
+
+.questionForm__form__input:focus {
+  outline: none;
 }
 
 .questionForm__form__btn {
   background-color: $fourth_dark;
   border: none;
+  border-radius: 0.5rem;
   color: #ffffff;
   font-weight: 500;
   padding: $s-size;
   margin: $m-size 0 0 0;
+}
+
+.questionForm__form__btn:active,
+.questionForm__form__btn:focus {
+  outline: none;
 }
 
 @media (min-width: $desktop-breakpoint) {
