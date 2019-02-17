@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Form from './Form';
 import Answer from './Answer';
 import ErrorModal from './ErrorModal';
@@ -86,7 +86,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <div className="container">
           <Form 
             handleFormSubmit={this.handleFormSubmit} 
@@ -105,7 +105,7 @@ class Home extends Component {
           text={this.state.typeError.text}
           closeCallback= {this.closeTypeError}
         />
-      </div>
+      </Fragment>
     );
   }
 }
