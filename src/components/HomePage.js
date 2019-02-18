@@ -81,7 +81,9 @@ class Home extends Component {
 
   handleTextInput = (e) => {
     const textInput = e.target.value;
-    this.setState(() => ({ textInput }));
+    if(!textInput || /\w+$/.test(textInput)) {
+      this.setState(() => ({ textInput }));
+    }
   };
 
   render() {
