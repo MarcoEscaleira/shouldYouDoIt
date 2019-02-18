@@ -81,7 +81,7 @@ class Home extends Component {
 
   handleTextInput = (e) => {
     const textInput = e.target.value;
-    if(!textInput || textInput.match(/^[a-z0-9 ]+$/i)) {
+    if(!textInput || textInput.match(/\w+/)) {
       this.setState(() => ({ textInput }));
     }
   };
