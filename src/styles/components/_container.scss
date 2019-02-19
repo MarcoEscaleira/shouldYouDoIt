@@ -1,7 +1,13 @@
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   max-width: 60rem;
-  min-height: 11rem;
-  margin: 0 auto;
+  // height: calc(100% - #{$footerHeight} - #{$headerHeight});
+  height: 100%;
+  position: relative;
   padding: 0 $m-size;
 }
 
