@@ -1,7 +1,7 @@
 .answer {
   display: flex;
   flex-direction: column;
-  margin-top: $s-size;
+  margin: $s-size 0 6rem 0;
 }
 
 .answer__title {
@@ -10,7 +10,6 @@
   border-right: 0.3rem solid darken($lightest, 20%);
   padding-left: $m-size;
   text-align: center;
-  margin-bottom: $m-size;
   text-transform: capitalize;
 }
 
@@ -29,7 +28,7 @@
 
 @media(min-width: $desktop-breakpoint) {
   .answer {
-    margin-top: $m-size;
+    margin: $m-size 0 6rem 0;
   }
 
   .answer__title {

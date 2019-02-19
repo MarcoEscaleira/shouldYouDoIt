@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import Form from './Form';
-import Answer from './Answer';
-import ErrorModal from './ErrorModal';
+import Form from '../components/Form';
+import Answer from '../components/Answer';
+import HistoryBoard from '../components/HistoryBoard';
+import ErrorModal from '../components/ErrorModal';
 
 const DEFAULT_STATE = {
   print: false,
@@ -101,6 +102,7 @@ class Home extends Component {
               data={this.state.data} 
             />
           }
+          <HistoryBoard /> 
         </div>
         <ErrorModal 
           show={this.state.typeError.showModal}

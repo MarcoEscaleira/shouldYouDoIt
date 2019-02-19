@@ -1,5 +1,5 @@
 import React from 'react';
-import GalleryImage from './GalleryImage';
+import GalleryImage from '../components/GalleryImage';
 
 const DEFAULT_STATE = {
   doIt: [],

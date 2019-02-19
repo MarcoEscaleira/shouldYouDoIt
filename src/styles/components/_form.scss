@@ -1,4 +1,5 @@
 .questionForm {
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -44,6 +45,9 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
+  .questionForm {
+    margin-bottom: $xl-size;
+  }
   .questionForm__title {
     font-size: $xl-size;
   }
