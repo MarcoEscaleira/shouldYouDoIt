@@ -36,7 +36,7 @@
   list-style: none;
 }
 
-.nav__ul__li__link {
+.navLink {
   padding: 1rem 0;
   margin: 0 2rem;
   position: relative;
@@ -44,11 +44,16 @@
   color: $lightest;
 }
 
-.nav__ul__li__link:last-child {
+.navLink:last-child {
   margin-right: 0; 
 }
 
-.nav__ul__li__link:hover {
+.navLink:hover {
+  border-top: $fifth_light 0.1rem solid;
+  border-bottom: $fifth_light 0.1rem solid;
+}
+
+.isActive {
   border-top: $fifth_light 0.1rem solid;
   border-bottom: $fifth_light 0.1rem solid;
 }
@@ -56,6 +61,7 @@
 @media(min-width: $desktop-breakpoint) {
   .header {
     height: 6rem;
+    margin-bottom: 2rem;
   }
 
   .nav__title {

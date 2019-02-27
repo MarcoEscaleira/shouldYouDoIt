@@ -19,6 +19,6 @@ const AppRouter = () => (
       <Footer />
     </Fragment>
   </BrowserRouter>
-)
+);
 
 export default AppRouter;
