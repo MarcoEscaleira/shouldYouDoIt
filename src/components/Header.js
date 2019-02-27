@@ -1,18 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Header = () => (
   <header className="header">
     <nav className="header__nav">
-      <Link to="/" className="nav__title">
+      <NavLink to="/" exact className="nav__title">
         Should You <span className="nav__title__span">Do It</span>
-      </Link>
+      </NavLink>
       <ul className="nav__ul">
         <li className="nav__ul__li">
-          <Link to="/" className="nav__ul__li__link">Home</Link>
+          <NavLink to="/" exact className="navLink" activeClassName="isActive">
+            Home
+          </NavLink>
         </li>
         <li className="nav__ul__li">
-          <Link to="/gallery" className="nav__ul__li__link">Gallery</Link>
+          <NavLink to="/gallery" className="navLink" activeClassName="isActive">
+            Gallery
+          </NavLink>
         </li>
       </ul>
     </nav>
