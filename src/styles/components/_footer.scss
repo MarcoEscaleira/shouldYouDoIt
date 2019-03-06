@@ -13,6 +13,7 @@
   margin: 0 auto;
   color: $second_light;
   align-items: center;
+  font-size: 1.3rem;
 }
 
 .message--red {
@@ -29,5 +30,9 @@
 @media(min-width: $desktop-breakpoint) {
   .footer {
     padding-top: 0rem;
+  }
+
+  .footer__message {
+    font-size: $m-size;
   }
 }
