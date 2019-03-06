@@ -3,6 +3,7 @@ import Form from '../components/Form';
 import Answer from '../components/Answer';
 import HistoryBoard from '../components/HistoryBoard';
 import ErrorModal from '../components/ErrorModal';
+import {API_URL} from "../config";
 
 const DEFAULT_STATE = {
   print: false,
@@ -48,7 +49,7 @@ class Home extends Component {
     } }));
     
     const request = async () => {
-      const response = await fetch(`https://shouldyoudoit.herokuapp.com/?search=${inputText}`, {
+      const response = await fetch(`${API_URL}/?search=${inputText}`, {
         headers: {
           "Content-Type": "application/json",
         }
