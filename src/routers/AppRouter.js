@@ -13,7 +13,7 @@ const AppRouter = () => (
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/gallery" component={GalleryPage} />
+        <Route exact path="/gallery" component={GalleryPage} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

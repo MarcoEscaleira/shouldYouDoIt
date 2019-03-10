@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {actions} from "../store/decisions";
 
-const ErrorModal = ({ show, text, closeCallback}) => (
+const ErrorModal = ({ show, text, closeTypeError}) => (
   <div className={`modal ${!show ? 'modal--invisible' : ''}`}>
-    <div className="modal__overlay" onClick={closeCallback}>
+    <div className="modal__overlay" onClick={closeTypeError}>
       <div className="modal__content">
         <h3 className="modal__title">Error</h3>
         <p className="modal__body">{text}</p>
         <button 
           className="modal__button"
-          onClick={closeCallback}
+          onClick={closeTypeError}
         > 
           Okay
         </button>
@@ -24,4 +26,13 @@ ErrorModal.propTypes = {
   closeCallback: PropTypes.func
 };
 
-export default ErrorModal;
+const mapStateToProps = state => ({
+  show: state.typeError.showModal,
+  text: state.typeError.text
+});
+
+const mapDispatchToProps = {
+  closeTypeError: actions.closeTypeError
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ErrorModal);

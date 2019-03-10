@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {actions} from "../store/decisions";
 
-const Answer = ({handleData, data: {msg, img}}) => (
+
+const Answer = ({handleState, data: {msg, img}}) => (
   <div className="answer">
     <h1 className="answer__title">{ (msg === 'loading') ? "Loading" : msg }</h1>
     <img 
@@ -10,7 +13,7 @@ const Answer = ({handleData, data: {msg, img}}) => (
       className="answer__image"
     />
     <button 
-      onClick={handleData}
+      onClick={handleState}
       className="answer__btn"
     >
       Clean
@@ -19,8 +22,16 @@ const Answer = ({handleData, data: {msg, img}}) => (
 );
 
 Answer.propTypes = {
-  handleData: PropTypes.func,
+  handleState: PropTypes.func,
   data: PropTypes.object
 };
 
-export default Answer;
+const mapStateToProps = state => ({
+  data: state.data
+});
+
+const mapDispatchToProps = {
+  handleState: actions.resetState
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Answer);
