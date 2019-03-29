@@ -3,11 +3,12 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin: $s-size 0 0 0;
 }
 
 .questionForm__title {
   color: $sixth_light;
-  font-size: $l-size;
+  font-size: 2.5rem;
 }
 
 .questionForm__form {
@@ -46,7 +47,7 @@
 
 @media (min-width: $desktop-breakpoint) {
   .questionForm {
-    margin-bottom: $xl-size;
+    margin: 0 0 $xl-size 0;
   }
   .questionForm__title {
     font-size: $xl-size;
