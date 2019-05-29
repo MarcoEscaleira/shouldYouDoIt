@@ -1,3 +1,4 @@
 [[redirects]]
-  from = "/gallery"
-  force = true
+  from = '/*'
+  to = '/index.html'
+  status = 200
