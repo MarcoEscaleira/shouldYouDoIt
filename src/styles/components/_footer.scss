@@ -1,10 +1,7 @@
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: $footerHeight;
   display: flex;
-  margin-top: 5rem;
 }
 
 .footer__message {
@@ -27,7 +24,7 @@
   font-weight: 500;
 }
 
-@media(min-width: $desktop-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
   .footer {
     padding-top: 0rem;
   }

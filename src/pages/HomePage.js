@@ -1,30 +1,21 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import Form from '../components/Form';
-import Answer from '../components/Answer';
-import ErrorModal from '../components/ErrorModal';
-import {connect} from "react-redux";
+import Form from "../components/Form";
+import Answer from "../components/Answer";
+import ErrorModal from "../components/ErrorModal";
+import { useSelector } from "react-redux";
 
+const Home = () => {
+  const print = useSelector(state => state.print);
+  return (
+    <Fragment>
+      <div className="container">
+        <Form />
+        {print && <Answer />}
+      </div>
+      <ErrorModal />
+    </Fragment>
+  );
+};
 
-class Home extends Component {
-
-  render() {
-    return (
-      <Fragment>
-        <div className="container">
-          <Form />
-          { this.props.print &&
-            <Answer />
-          }
-        </div>
-        <ErrorModal />
-      </Fragment>
-    );
-  }
-}
-
-const mapStateToProps = state => ({
-  print: state.print
-});
-
-export default connect(mapStateToProps)(Home);
+export default Home;

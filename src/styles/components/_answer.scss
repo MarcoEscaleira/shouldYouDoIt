@@ -1,7 +1,7 @@
 .answer {
   display: flex;
   flex-direction: column;
-  margin: $s-size 0 6rem 0;
+  margin: $s-size 0 1rem 0;
 }
 
 .answer__title {
@@ -14,7 +14,7 @@
   text-transform: capitalize;
 }
 
-.answer__image{
+.answer__image {
   height: 25rem;
   margin-bottom: $m-size;
 }
@@ -27,9 +27,9 @@
   border-radius: 0.5rem;
 }
 
-@media(min-width: $desktop-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
   .answer {
-    margin: $m-size 0 6rem 0;
+    margin: 0 0 4rem 0;
   }
 
   .answer__title {
@@ -37,7 +37,7 @@
     margin-bottom: $l-size;
   }
 
-  .answer__image{
+  .answer__image {
     height: 40rem;
     margin-bottom: $m-size;
   }

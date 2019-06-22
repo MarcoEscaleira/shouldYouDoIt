@@ -1,21 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types';
-import {connect} from "react-redux";
-import {actions} from "../store/decisions";
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { actions } from "../store/decisions";
 
-
-const Answer = ({handleState, data: {msg, img}}) => (
+const Answer = ({ handleState, data: { msg, img } }) => (
   <div className="answer">
-    <h1 className="answer__title">{ (msg === 'loading') ? "Loading" : msg }</h1>
-    <img 
-      src={img}
-      alt="Should You Do It gif"
-      className="answer__image"
-    />
-    <button 
-      onClick={handleState}
-      className="answer__btn"
-    >
+    <h1 className="answer__title">{msg === "loading" ? "Loading" : msg}</h1>
+    <img src={img} alt="Should You Do It gif" className="answer__image" />
+    <button onClick={handleState} className="answer__btn">
       Clean
     </button>
   </div>
@@ -34,4 +26,7 @@ const mapDispatchToProps = {
   handleState: actions.resetState
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Answer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Answer);

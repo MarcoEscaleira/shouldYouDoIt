@@ -3,7 +3,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: $s-size 0 0 0;
 }
 
 .questionForm__title {
@@ -37,7 +36,7 @@
   color: #ffffff;
   font-weight: 500;
   padding: $s-size;
-  margin: $m-size 0 3rem 0;
+  margin: $m-size 0 1.5rem 0;
 }
 
 .questionForm__form__btn:active,

@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 0 6rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .gallery__title {
-  margin-top: $m-size;
+  margin: $m-size 0;
   text-align: center;
   color: $sixth_light;
   letter-spacing: 0.2rem;
+  font-size: 2.5rem;
 }
 
 .gallery__body {
@@ -43,7 +44,11 @@
   padding-bottom: $s-size;
 }
 
-@media(min-width: $desktop-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
+  .gallery__title {
+    font-size: $xl-size;
+  }
+
   .gallery__body {
     flex-direction: row;
   }

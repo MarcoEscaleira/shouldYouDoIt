@@ -45,7 +45,7 @@
 }
 
 .navLink:last-child {
-  margin-right: 0; 
+  margin-right: 0;
 }
 
 .navLink:hover {
@@ -57,14 +57,12 @@
   border-bottom: $fifth_light 0.1rem solid;
 }
 
-@media(min-width: $desktop-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
   .header {
     height: 6rem;
-    margin-bottom: 2rem;
   }
 
   .nav__title {
     font-size: $l-size;
   }
 }
-
