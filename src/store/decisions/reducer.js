@@ -1,61 +1,30 @@
-const defaultDecisionsState = {
+import { RESET_DATA, SET_LOADING_ANIMATION, SET_DATA } from '../actionTypes';
+
+export const defaultDecisionsState = {
   print: false,
   data: {},
-  oldTextInput: '',
-  textInput: '',
-  typeError: {
-    showModal: false,
-    text: ''
-  }
+  oldTextInput: ''
 };
 
 const decisionsReducer = (state = defaultDecisionsState, action) => {
   switch (action.type) {
-    case 'RESET_STATE':
-      return defaultDecisionsState;
-    case 'RESET_DATA':
+    case RESET_DATA:
       return {
         ...state,
         print: false,
         data: {}
       };
-    case 'HANDLE_TYPE_ERROR':
+    case SET_LOADING_ANIMATION:
       return {
         ...state,
-        typeError: {
-          showModal: true,
-          text: action.text
-        }
+        print: true
       };
-    case 'CLOSE_TYPE_ERROR':
-      return {
-        ...state,
-        showModal: false,
-        typeError: {
-          showModal: false,
-          text: ''
-        }
-      };
-    case 'SET_LOADING_ANIMATION':
-      return {
-        ...state,
-        print: true,
-        data: {
-          msg: action.msg,
-          img: action.img
-        }
-      };
-    case 'SET_DATA':
+    case SET_DATA:
       return {
         ...state,
         print: true,
         data: action.data,
         oldTextInput: action.inputText
-      };
-    case 'HANDLE_TEXT_INPUT':
-      return {
-        ...state,
-        textInput: action.textInput
       };
     default:
       return state;

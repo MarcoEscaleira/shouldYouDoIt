@@ -5,26 +5,45 @@
   "dependencies": {
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
+    "prop-types": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "prop-types": "latest"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "react-scripts": "2.1.3"
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "5.0.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.13.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:js": "eslint src -c .eslintrc --ext js,jsx",
+    "lintPretty": "pretty-quick",
+    "lint": "run-p --print-label lint:*",
+    "pre-commit-hook": "run-s \"lintPretty\" \"lint:js --fix\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s pre-commit-hook"
+    }
   },
   "browserslist": [
     ">0.2%",

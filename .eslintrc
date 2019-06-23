@@ -1,0 +1,72 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          "jsx"
+        ]
+      }
+    ],
+    "react/jsx-curly-spacing": "off",
+    "react/button-has-type": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-uses-vars": "warn",
+    "react/display-name": "warn",
+    "react/require-default-props": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/no-array-index-key": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-return-assign": "off",
+    "no-underscore-dangle": "off",
+    "import/named": "off",
+    "consistent-return": "off",
+    "comma-dangle": "off",
+    "no-nested-ternary": "off",
+    "prefer-destructuring": "off",
+    "eqeqeq": "off",
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "no-unexpected-multiline": "warn",
+    "no-plusplus": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 200,
+        "ignoreUrls": true
+      }
+    ],
+    "import/unambiguous": "off",
+    "prefer-promise-reject-errors": "off",
+    "no-param-reassign": "off",
+    "no-useless-escape": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint"
+}

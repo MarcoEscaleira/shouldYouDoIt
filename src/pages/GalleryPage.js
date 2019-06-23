@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import GalleryImage from "../components/GalleryImage";
-import { API_URL } from "../config";
+import React, { useState, useEffect } from 'react';
+import GalleryImage from '../components/GalleryImage';
+import { API_URL } from '../config';
 
 const Gallery = () => {
   const [doIt, setDoIt] = useState([]);
@@ -10,11 +10,11 @@ const Gallery = () => {
     const requestAll = async () => {
       const response = await fetch(`${API_URL}/all`);
       const data = await response.json();
-      const doIt = data.filter(answer => answer.msg === "do it");
-      const dontDoIt = data.filter(answer => answer.msg === "don't do it");
+      const doit = data.filter(answer => answer.msg === 'do it');
+      const dontdoit = data.filter(answer => answer.msg === "don't do it");
 
-      setDoIt(doIt);
-      setDontDoIt(dontDoIt);
+      setDoIt(doit);
+      setDontDoIt(dontdoit);
     };
     requestAll();
   }, []);

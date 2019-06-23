@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux';
 
-import Form from "../components/Form";
-import Answer from "../components/Answer";
-import ErrorModal from "../components/ErrorModal";
-import { useSelector } from "react-redux";
+import Form from '../components/Form';
+import Answer from '../components/Answer';
 
 const Home = () => {
   const print = useSelector(state => state.print);
@@ -13,7 +12,6 @@ const Home = () => {
         <Form />
         {print && <Answer />}
       </div>
-      <ErrorModal />
     </Fragment>
   );
 };

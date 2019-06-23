@@ -1,13 +1,5 @@
 import React from 'react';
 
-class HistoryBoard extends React.Component {
-  render() {
-    return (
-      <div className="historyBoard">
-        
-      </div>
-    );
-  }
-}
+const HistoryBoard = () => <div className="historyBoard" />;
 
 export default HistoryBoard;

@@ -1,17 +1,10 @@
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
 .container {
   max-width: 60rem;
-  height: 100%;
-  position: relative;
   padding: 0 $m-size;
 }
 
 @media (min-width: $desktop-breakpoint) {
   .container {
-    margin: 0 auto;
+    align-self: center;
   }
 }
