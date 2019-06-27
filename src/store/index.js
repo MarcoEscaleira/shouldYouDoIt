@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 
 import decisionReducer from './decisions';
 
-export default () => {
+export default intialState => {
   const middlewares = [thunk];
   const enhancers = [applyMiddleware(...middlewares)];
   const composeEnhancers =
@@ -11,5 +11,9 @@ export default () => {
       ? compose
       : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-  return createStore(decisionReducer, composeEnhancers(...enhancers));
+  return createStore(
+    decisionReducer,
+    intialState,
+    composeEnhancers(...enhancers)
+  );
 };

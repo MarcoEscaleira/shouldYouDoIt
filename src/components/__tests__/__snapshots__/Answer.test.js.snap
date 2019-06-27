@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Answer test suite Should clean data after clicking on Clean btn 1`] = `
+<div
+  class="answer"
+>
+  <h1
+    class="answer__title"
+  >
+    do it
+  </h1>
+  <img
+    alt="Should You Do It gif"
+    class="answer__image"
+    src="aGifImg.gif"
+  />
+  <button
+    class="answer__btn"
+  >
+    Clean
+  </button>
+</div>
+`;
+
+exports[`Answer test suite Should clean data after clicking on Clean btn 2`] = `
+<div
+  class="answer"
+>
+  <h1
+    class="answer__title"
+  >
+    loading
+  </h1>
+  <img
+    alt="Should You Do It gif"
+    class="answer__image"
+    src="./gifs/Blocks-1s-200px.gif"
+  />
+  <button
+    class="answer__btn"
+  >
+    Clean
+  </button>
+</div>
+`;
+
+exports[`Answer test suite Should render Answer correctly 1`] = `
+<div
+  class="answer"
+>
+  <h1
+    class="answer__title"
+  >
+    loading
+  </h1>
+  <img
+    alt="Should You Do It gif"
+    class="answer__image"
+    src="./gifs/Blocks-1s-200px.gif"
+  />
+  <button
+    class="answer__btn"
+  >
+    Clean
+  </button>
+</div>
+`;
+
+exports[`Answer test suite Should render Answer with data 1`] = `
+<div
+  class="answer"
+>
+  <h1
+    class="answer__title"
+  >
+    do it
+  </h1>
+  <img
+    alt="Should You Do It gif"
+    class="answer__image"
+    src="aGifImg.gif"
+  />
+  <button
+    class="answer__btn"
+  >
+    Clean
+  </button>
+</div>
+`;

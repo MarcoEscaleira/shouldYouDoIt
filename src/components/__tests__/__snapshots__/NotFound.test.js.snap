@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not Found test suite Should render Not Found correctly 1`] = `
+<div
+  class="notFound"
+>
+  <p
+    class="notFound__label"
+  >
+    404
+  </p>
+  <p
+    class="notFound__text"
+  >
+    Oops, we can't seem to find the page you're looking for.
+  </p>
+  <a
+    class="notFound__link"
+    href="/"
+  >
+    Go Home
+  </a>
+</div>
+`;

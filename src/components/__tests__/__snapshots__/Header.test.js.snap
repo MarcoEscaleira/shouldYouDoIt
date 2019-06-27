@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test suite Should render Header correctly 1`] = `
+<header
+  class="header"
+>
+  <nav
+    class="header__nav"
+  >
+    <a
+      aria-current="page"
+      class="nav__title active"
+      href="/"
+    >
+      Should You 
+      <span
+        class="nav__title__span"
+      >
+        Do It
+      </span>
+    </a>
+    <ul
+      class="nav__ul"
+    >
+      <li
+        class="nav__ul__li"
+      >
+        <a
+          aria-current="page"
+          class="navLink isActive"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="nav__ul__li"
+      >
+        <a
+          class="navLink"
+          href="/gallery"
+        >
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

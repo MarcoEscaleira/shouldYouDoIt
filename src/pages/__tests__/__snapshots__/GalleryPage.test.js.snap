@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery Page test suite Should render Gallery Page correctly 1`] = `
+<div
+  class="gallery"
+>
+  <h1
+    class="gallery__title"
+  >
+    Gallery
+  </h1>
+  <div
+    class="gallery__body"
+  >
+    <div
+      class="gallery__doIt"
+    >
+      <h1
+        class="showcase__title"
+      >
+        Do It
+      </h1>
+      <ul
+        class="gallery__showcase"
+      />
+    </div>
+    <div
+      class="gallery__dontDoIt"
+    >
+      <h1
+        class="showcase__title"
+      >
+        Don't Do It
+      </h1>
+      <ul
+        class="gallery__showcase"
+      />
+    </div>
+  </div>
+</div>
+`;

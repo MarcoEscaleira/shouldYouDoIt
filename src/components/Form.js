@@ -67,6 +67,7 @@ const Form = ({ resetData, oldTextInput, setLoadingAnimation, setData }) => {
             value={textInput}
             onChange={e => handleTextInput(e.target.value)}
             className="questionForm__form__input"
+            data-testid="input"
           />
           <button type="submit" className="questionForm__form__btn">
             Decide

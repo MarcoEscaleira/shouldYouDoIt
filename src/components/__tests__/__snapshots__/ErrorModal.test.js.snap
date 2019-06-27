@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Modal test suite Should hide Error Modal 1`] = `
+<div
+  class="modal modal--invisible"
+>
+  <div
+    class="modal__overlay"
+  >
+    <div
+      class="modal__content"
+    >
+      <h3
+        class="modal__title"
+      >
+        Error
+      </h3>
+      <p
+        class="modal__body"
+      />
+      <button
+        class="modal__button"
+      >
+        Okay
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Error Modal test suite Should render Error Modal correctly 1`] = `
+<div
+  class="modal "
+>
+  <div
+    class="modal__overlay"
+  >
+    <div
+      class="modal__content"
+    >
+      <h3
+        class="modal__title"
+      >
+        Error
+      </h3>
+      <p
+        class="modal__body"
+      >
+        Error modal text
+      </p>
+      <button
+        class="modal__button"
+      >
+        Okay
+      </button>
+    </div>
+  </div>
+</div>
+`;

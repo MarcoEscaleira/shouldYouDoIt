@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Router test suite Should render App Router correctly 1`] = `
+<div
+  class="main"
+>
+  <header
+    class="header"
+  >
+    <nav
+      class="header__nav"
+    >
+      <a
+        aria-current="page"
+        class="nav__title active"
+        href="/"
+      >
+        Should You 
+        <span
+          class="nav__title__span"
+        >
+          Do It
+        </span>
+      </a>
+      <ul
+        class="nav__ul"
+      >
+        <li
+          class="nav__ul__li"
+        >
+          <a
+            aria-current="page"
+            class="navLink isActive"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="nav__ul__li"
+        >
+          <a
+            class="navLink"
+            href="/gallery"
+          >
+            Gallery
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div
+    class="container"
+  >
+    <div
+      class="questionForm"
+    >
+      <h1
+        class="questionForm__title"
+      >
+        What do you want to do?
+      </h1>
+      <form
+        autocomplete="off"
+        class="questionForm__form"
+      >
+        <input
+          class="questionForm__form__input"
+          data-testid="input"
+          name="toDo"
+          type="text"
+          value=""
+        />
+        <button
+          class="questionForm__form__btn"
+          type="submit"
+        >
+          Decide
+        </button>
+      </form>
+    </div>
+    <div
+      class="modal modal--invisible"
+    >
+      <div
+        class="modal__overlay"
+      >
+        <div
+          class="modal__content"
+        >
+          <h3
+            class="modal__title"
+          >
+            Error
+          </h3>
+          <p
+            class="modal__body"
+          />
+          <button
+            class="modal__button"
+          >
+            Okay
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

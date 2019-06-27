@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery Image test suite Should render Gallery Image correctly 1`] = `
+<li>
+  <img
+    alt="gallery img"
+    class="gallery__showcase__img"
+    src="myGif.gif"
+  />
+</li>
+`;

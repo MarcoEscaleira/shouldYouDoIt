@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer test suite Should render Footer correctly 1`] = `
+<footer
+  class="footer"
+>
+  <p
+    class="footer__message"
+  >
+    Made with 
+    <span
+      class="message--red"
+    >
+      ♥
+    </span>
+     by
+     
+    <a
+      class="message__name"
+      href="https://github.com/marcoescaleira"
+    >
+      Marco Escaleira
+    </a>
+     
+    &
+     
+    <a
+      class="message__name"
+      href="https://github.com/MarceloSilva00"
+    >
+      Marcelo Silva
+    </a>
+  </p>
+</footer>
+`;

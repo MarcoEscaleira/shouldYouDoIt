@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form test suite Should render Form correctly 1`] = `
+<div
+  class="questionForm"
+>
+  <h1
+    class="questionForm__title"
+  >
+    What do you want to do?
+  </h1>
+  <form
+    autocomplete="off"
+    class="questionForm__form"
+  >
+    <input
+      class="questionForm__form__input"
+      data-testid="input"
+      name="toDo"
+      type="text"
+      value=""
+    />
+    <button
+      class="questionForm__form__btn"
+      type="submit"
+    >
+      Decide
+    </button>
+  </form>
+</div>
+`;
