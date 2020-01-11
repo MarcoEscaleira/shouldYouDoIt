@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import GalleryImage from '../components/GalleryImage';
 import { API_URL } from '../config';
+import { DecisionsStateData } from '~store/decisions';
 
-const Gallery = () => {
-  const [doIt, setDoIt] = useState([]);
-  const [dontDoIt, setDontDoIt] = useState([]);
+interface RequestedDecisionsStateData extends Array<DecisionsStateData> { }
+
+const Gallery: React.FC = () => {
+  const [doIt, setDoIt] = useState<RequestedDecisionsStateData>();
+  const [dontDoIt, setDontDoIt] = useState<RequestedDecisionsStateData>();
 
   useEffect(() => {
     const requestAll = async () => {
       const response = await fetch(`${API_URL}/all`);
-      const data = await response.json();
-      const doit = data.filter(answer => answer.msg === 'do it');
-      const dontdoit = data.filter(answer => answer.msg === "don't do it");
+      const data: RequestedDecisionsStateData = await response.json();
+
+      const doit: RequestedDecisionsStateData = data.filter(answer => answer.msg === 'do it');
+      const dontdoit: RequestedDecisionsStateData = data.filter(answer => answer.msg === "don't do it");
 
       setDoIt(doit);
       setDontDoIt(dontdoit);
@@ -27,7 +31,7 @@ const Gallery = () => {
         <div className="gallery__doIt">
           <h1 className="showcase__title">Do It</h1>
           <ul className="gallery__showcase">
-            {doIt.map((answer, index) => (
+            {doIt?.map((answer, index) => (
               <GalleryImage key={index} answer={answer} />
             ))}
           </ul>
@@ -35,7 +39,7 @@ const Gallery = () => {
         <div className="gallery__dontDoIt">
           <h1 className="showcase__title">Don't Do It</h1>
           <ul className="gallery__showcase">
-            {dontDoIt.map((answer, index) => (
+            {dontDoIt?.map((answer, index) => (
               <GalleryImage key={index} answer={answer} />
             ))}
           </ul>

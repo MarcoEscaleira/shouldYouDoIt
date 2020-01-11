@@ -1,7 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { NullaryFn } from 'utils/functionalTypes';
 
-const ErrorModal = ({ show, text, closeCallback }) => (
+interface Props {
+  show: boolean,
+  text: string,
+  closeCallback: NullaryFn<void>
+};
+
+const ErrorModal: React.FC<Props> = ({ show, text, closeCallback }) => (
   <div className={`modal ${!show ? 'modal--invisible' : ''}`}>
     <div className="modal__overlay" onClick={closeCallback}>
       <div className="modal__content">
@@ -15,10 +21,8 @@ const ErrorModal = ({ show, text, closeCallback }) => (
   </div>
 );
 
-ErrorModal.propTypes = {
-  show: PropTypes.bool,
-  text: PropTypes.string,
-  closeCallback: PropTypes.func
-};
+ErrorModal.defaultProps = {
+  show: false
+}
 
 export default ErrorModal;

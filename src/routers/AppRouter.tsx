@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NotFound from '../components/NotFound';
 
-const AppRouter = () => (
+const AppRouter: React.FC = () => (
   <BrowserRouter>
     <Fragment>
       <div className="main">

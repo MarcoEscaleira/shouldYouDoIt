@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotFound = () => (
+const NotFound: React.FC = () => (
   <div className="notFound">
     <p className="notFound__label">404</p>
     <p className="notFound__text">

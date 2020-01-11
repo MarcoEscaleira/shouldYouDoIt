@@ -3,14 +3,16 @@ import { useSelector } from 'react-redux';
 
 import Form from '../components/Form';
 import Answer from '../components/Answer';
+import { DecisionsState } from '~store/decisions';
 
-const Home = () => {
-  const print = useSelector(state => state.print);
+const Home: React.FC = () => {
+  const print = useSelector<DecisionsState, boolean>(state => state.print);
+
   return (
-    <div className="container">
+    <section className="container">
       <Form />
       {print && <Answer />}
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,5 @@
+export enum ActionTypes {
+  RESET_DATA = 'RESET_DATA',
+  SET_LOADING_ANIMATION = 'SET_LOADING_ANIMATION',
+  SET_DATA = 'SET_DATA'
+};
