@@ -26,12 +26,16 @@ export const Overlay = styled.div`
 export const Content = styled.div`
   background-color: ${pallete.fifth_light};
   color: ${pallete.white};
-  max-width: 30rem;
+  width: 30rem;
   border-radius: 1rem;
   outline: none;
-  padding: ${sizes.l};
+  padding: ${sizes.s};
   text-align: center;
   word-break: break-all;
+
+  @media (min-width: ${sizes.desktop_breakpoint}) {
+    width: 40rem;
+  }
 `;
 
 export const Title = styled.h1`

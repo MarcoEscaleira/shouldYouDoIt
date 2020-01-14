@@ -43,9 +43,13 @@ const linkBorder = `${pallete.fifth_light} 0.1rem solid`;
 
 export const Link = styled(NavLink)<HeaderLink>`
   ${({ isTitle }) => isTitle && css`
-    font-size: ${sizes.m};
+    font-size: 1.6rem;
     font-weight: 300;
     color: ${pallete.fifth_light};
+
+    @media (min-width: ${sizes.desktop_breakpoint}) {
+      font-size: 2.2rem;
+    }
   `}
   ${({ isNavLink }) => isNavLink && css`
     font-size: ${sizes.s}
@@ -57,6 +61,10 @@ export const Link = styled(NavLink)<HeaderLink>`
     &:hover {
       border-top: ${linkBorder};
       border-bottom: ${linkBorder};
+    }
+
+    @media (min-width: ${sizes.desktop_breakpoint}) {
+      font-size: 1.3rem;
     }
   `}
 

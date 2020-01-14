@@ -7,11 +7,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 30rem;
+
+  @media (min-width: ${sizes.desktop_breakpoint}) {
+    width: 50rem;
+  }
 `;
 
 export const Title = styled.h1`
   color: ${pallete.sixth_light};
   font-size: 2.5rem;
+
+  @media (min-width: ${sizes.desktop_breakpoint}) {
+    font-size: 3rem;
+  }
 `;
 
 export const FormContainer = styled.form`
