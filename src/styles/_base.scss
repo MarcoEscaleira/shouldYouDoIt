@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -10,9 +12,9 @@ html {
 body {
   position: relative;
   min-height: 100%;
-  background-color: $darkest;
+  background-color: #0A2F51;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
+  font-size: 1.6rem;
 }
 
 a {
@@ -31,4 +33,9 @@ button:disabled {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* An exception for activeClassName since I dont want to waste so much time looking at this minor */
+.activeHeaderLink {
+  border-bottom: #56B870 0.1rem solid;
 }

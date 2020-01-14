@@ -10,10 +10,15 @@
     "sourceMap": true,
     "baseUrl": "./src",
     "paths": {
-      "~*": ["./*"]
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "pages/*": ["pages/*"],
+      "routers/*": ["routers/*"],
+      "store/*": ["store/*"],
+      "styles/*": ["styles/*"],
+      "utils/*": ["utils/*"]
     }
   },
-  "include": ["src/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"],
-  "compileOnSave": true
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

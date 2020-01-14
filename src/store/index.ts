@@ -1,9 +1,13 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
 import decisionReducer, { DecisionsState } from './decisions';
+import errorModalReducer, { ErrorModalState } from './errorModal';
 
-export type StoreState = DecisionsState;
+export type StoreState = {
+  decisions: DecisionsState;
+  errorModal: ErrorModalState;
+};
 
 export default (intialState?: StoreState) => {
   const middlewares = [thunk];
@@ -15,7 +19,10 @@ export default (intialState?: StoreState) => {
       : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
   return createStore(
-    decisionReducer,
+    combineReducers({
+      decisions: decisionReducer,
+      errorModal: errorModalReducer
+    }),
     intialState,
     composeEnhancers(...enhancers)
   );

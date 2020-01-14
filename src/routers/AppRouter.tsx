@@ -1,23 +1,25 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { Fragment } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import HomePage from '../pages/HomePage';
-import GalleryPage from '../pages/GalleryPage';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import NotFound from '../components/NotFound';
+import HomePage from "../pages/HomePage/HomePage";
+import GalleryPage from "../pages/GalleryPage/GalleryPage";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import NotFound from "../components/NotFound/NotFound";
+
+import { AppContainer } from "./styled-components";
 
 const AppRouter: React.FC = () => (
   <BrowserRouter>
     <Fragment>
-      <div className="main">
+      <AppContainer>
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/gallery" component={GalleryPage} />
           <Route component={NotFound} />
         </Switch>
-      </div>
+      </AppContainer>
       <Footer />
     </Fragment>
   </BrowserRouter>

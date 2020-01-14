@@ -1,9 +1,6 @@
-export const getPrint = state => state.print;
+import { StoreState } from '..';
+export const getPrint = (state: StoreState) => state.decisions.print;
 
-export const getData = state => state.data;
+export const getData = (state: StoreState) => state.decisions.data;
 
-export const getOldTextInput = state => state.oldTextInput;
-
-export const getTextInput = state => state.textInput;
-
-export const getTypeError = state => state.typeError;
+export const getOldTextInput = (state: StoreState) => state.decisions.oldTextInput;
