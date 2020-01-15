@@ -47,6 +47,7 @@
     "no-return-assign": "off",
     "no-underscore-dangle": "off",
     "quotes": ["error", "double"],
+    "linebreak-style": "off",
     "consistent-return": "off",
     "operator-linebreak": "off",
     "implicit-arrow-linebreak": "off",
