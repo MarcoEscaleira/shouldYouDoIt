@@ -1,20 +1,19 @@
-import { ActionTypes } from '../actionTypes';
-import { DecisionsActions } from './actions';
-import { DecisionsState } from '.';
+import { ActionTypes } from "../actionTypes";
+import { DecisionsActions } from "./actions";
+import { DecisionsState } from ".";
 
 export const defaultDecisionsState: DecisionsState = {
   print: false,
-  oldTextInput: ''
+  oldTextInput: ""
 };
 
-const decisionsReducer = (state: DecisionsState = defaultDecisionsState, action: DecisionsActions) => {
+const decisionsReducer = (
+  state: DecisionsState = defaultDecisionsState,
+  action: DecisionsActions
+): DecisionsState => {
   switch (action.type) {
     case ActionTypes.RESET_DATA:
-      return {
-        ...state,
-        print: false,
-        data: {}
-      };
+      return defaultDecisionsState;
     case ActionTypes.SET_LOADING_ANIMATION:
       return {
         ...state,

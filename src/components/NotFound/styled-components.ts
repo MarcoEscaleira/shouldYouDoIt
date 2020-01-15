@@ -1,7 +1,7 @@
 // @ts-nocheck
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { pallete, sizes, normalFont } from '../../styles/_settings';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { pallete, sizes, normalFont } from "~/styles/_settings";
 
 export const Container = styled.div`
   display: flex;

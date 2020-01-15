@@ -1,7 +1,13 @@
 // @ts-nocheck
-import styled, { css } from 'styled-components';
-import { Link, NavLink } from 'react-router-dom';
-import { pallete, sizes, normalFont, headerHeight, headerDesktopHeight } from '../../styles/_settings';
+import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
+import {
+  pallete,
+  sizes,
+  normalFont,
+  headerHeight,
+  headerDesktopHeight
+} from "~/styles/_settings";
 
 export const Container = styled.header`
   width: 100%;
@@ -36,22 +42,25 @@ export const Item = styled.li`
 type HeaderLink = {
   isTitle?: boolean;
   isNavLink?: boolean;
-}
+};
 
 const linkBorder = `${pallete.fifth_light} 0.1rem solid`;
 
-
 export const Link = styled(NavLink)<HeaderLink>`
-  ${({ isTitle }) => isTitle && css`
-    font-size: 1.6rem;
-    font-weight: 300;
-    color: ${pallete.fifth_light};
+  ${({ isTitle }) =>
+    isTitle &&
+    css`
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: ${pallete.fifth_light};
 
-    @media (min-width: ${sizes.desktop_breakpoint}) {
-      font-size: 2.2rem;
-    }
-  `}
-  ${({ isNavLink }) => isNavLink && css`
+      @media (min-width: ${sizes.desktop_breakpoint}) {
+        font-size: 2.2rem;
+      }
+    `}
+  ${({ isNavLink }) =>
+    isNavLink &&
+    css`
     font-size: ${sizes.s}
     margin: 0 1rem;
     padding: 0.6rem 0;

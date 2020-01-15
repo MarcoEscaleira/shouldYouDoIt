@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { sizes, pallete } from '../../styles/_settings';
+import styled from "styled-components";
+import { sizes, pallete } from "~/styles/_settings";
 
 export const Container = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ export const List = styled.ul`
   justify-content: center;
 `;
 
-export const SubTitle  = styled.h2`
+export const SubTitle = styled.h2`
   font-size: 2rem;
   text-align: center;
   color: ${pallete.second_light};
@@ -45,6 +45,6 @@ export const SubTitle  = styled.h2`
   margin: 0 2rem;
 `;
 
-export const DoIt  = styled.div``;
+export const DoIt = styled.div``;
 
-export const DontDoIt  = styled.div``;
+export const DontDoIt = styled.div``;

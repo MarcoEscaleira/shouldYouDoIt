@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { Container } from "./styled-components";
 
-import Form from "../../components/Form/Form";
-import Answer from "../../components/Answer/Answer";
-import ErrorModal from "../../components/ErrorModal/ErrorModal";
-import { StoreState } from "../../store/";
-import { getPrint } from "../../store/decisions/selectors";
-import { getErrorModal } from "../../store/errorModal/selectors";
+import Form from "~/components/Form/Form";
+import Answer from "~/components/Answer/Answer";
+import ErrorModal from "~/components/ErrorModal/ErrorModal";
+import { StoreState } from "~/store/";
+import { getPrint } from "~/store/decisions/selectors";
+import { getErrorModal } from "~/store/errorModal/selectors";
 
 interface Props {
   print: boolean;
@@ -17,7 +17,7 @@ interface Props {
   };
 }
 
-const Home: React.FC<Props> = ({ print, errorModal }) => (
+export const Home: React.FC<Props> = ({ print, errorModal }) => (
   <Fragment>
     <Container>
       <Form />

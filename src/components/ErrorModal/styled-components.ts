@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
-import { sizes, pallete } from '../../styles/_settings';
+import styled, { css } from "styled-components";
+import { sizes, pallete } from "~/styles/_settings";
 
 type ContainerProps = {
   isHidden: boolean;
-}
+};
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
@@ -12,7 +12,11 @@ export const Container = styled.div<ContainerProps>`
   top: 0;
   width: 100%;
   height: 100%;
-  ${props => props.isHidden && css`visibility: hidden;`};
+  ${props =>
+    props.isHidden &&
+    css`
+      visibility: hidden;
+    `};
 `;
 
 export const Overlay = styled.div`

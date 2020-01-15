@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { sizes, pallete } from '../../styles/_settings';
+import styled from "styled-components";
+import { sizes, pallete } from "~/styles/_settings";
 
 export const Container = styled.div`
   position: relative;

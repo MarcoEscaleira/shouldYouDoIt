@@ -1,5 +1,10 @@
-import styled from 'styled-components';
-import { sizes, pallete, footerHeight, footerDesktopHeight } from '../../styles/_settings';
+import styled from "styled-components";
+import {
+  sizes,
+  pallete,
+  footerHeight,
+  footerDesktopHeight
+} from "~/styles/_settings";
 
 export const Container = styled.footer`
   display: flex;

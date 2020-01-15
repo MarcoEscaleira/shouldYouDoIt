@@ -2,45 +2,45 @@
 
 exports[`App Router test suite Should render App Router correctly 1`] = `
 <div
-  class="main"
+  class="sc-jDwBTQ gozLLG"
 >
   <header
-    class="header"
+    class="sc-ckVGcZ fZFkoE"
   >
     <nav
-      class="header__nav"
+      class="sc-jKJlTe hZuZfW"
     >
       <a
         aria-current="page"
-        class="nav__title active"
+        class="sc-kEYyzF eIPgcw active"
         href="/"
       >
         Should You 
         <span
-          class="nav__title__span"
+          class="sc-kkGfuU iJfJXv"
         >
           Do It
         </span>
       </a>
       <ul
-        class="nav__ul"
+        class="sc-eNQAEJ jZNGcd"
       >
         <li
-          class="nav__ul__li"
+          class="sc-hMqMXs gcxcSR"
         >
           <a
             aria-current="page"
-            class="navLink isActive"
+            class="sc-kEYyzF gZsYJU activeHeaderLink"
             href="/"
           >
             Home
           </a>
         </li>
         <li
-          class="nav__ul__li"
+          class="sc-hMqMXs gcxcSR"
         >
           <a
-            class="navLink"
+            class="sc-kEYyzF gZsYJU"
             href="/gallery"
           >
             Gallery
@@ -49,59 +49,59 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
       </ul>
     </nav>
   </header>
-  <div
-    class="container"
+  <section
+    class="sc-bdVaJa hrXhkO"
   >
     <div
-      class="questionForm"
+      class="sc-bwzfXH hLZfSd"
     >
       <h1
-        class="questionForm__title"
+        class="sc-htpNat jTMDms"
       >
         What do you want to do?
       </h1>
       <form
         autocomplete="off"
-        class="questionForm__form"
+        class="sc-bxivhb jOHLsI"
       >
         <input
-          class="questionForm__form__input"
+          class="sc-ifAKCX eZJTGo"
           data-testid="input"
           name="toDo"
           type="text"
           value=""
         />
         <button
-          class="questionForm__form__btn"
+          class="sc-EHOje gJehKJ"
           type="submit"
         >
           Decide
         </button>
       </form>
     </div>
+  </section>
+  <div
+    class="sc-iwsKbI deaeZI"
+  >
     <div
-      class="modal modal--invisible"
+      class="sc-gZMcBi hNRCqh"
     >
       <div
-        class="modal__overlay"
+        class="sc-gqjmRU cNBMaw"
       >
-        <div
-          class="modal__content"
+        <h1
+          class="sc-VigVT ewQHNn"
         >
-          <h3
-            class="modal__title"
-          >
-            Error
-          </h3>
-          <p
-            class="modal__body"
-          />
-          <button
-            class="modal__button"
-          >
-            Okay
-          </button>
-        </div>
+          Oops!
+        </h1>
+        <p
+          class="sc-jTzLTM kApKu"
+        />
+        <button
+          class="sc-fjdhpX fUzulY"
+        >
+          Okay
+        </button>
       </div>
     </div>
   </div>

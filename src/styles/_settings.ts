@@ -14,14 +14,14 @@ export enum pallete {
   white = "#FFFFFF"
 }
 
-//Header / Footer heights
-export const headerHeight: string = "5rem";
-export const headerDesktopHeight: string = "7rem";
-export const footerHeight: string = "5rem";
-export const footerDesktopHeight: string = "7rem";
+// Header / Footer heights
+export const headerHeight = "5rem";
+export const headerDesktopHeight = "7rem";
+export const footerHeight = "5rem";
+export const footerDesktopHeight = "7rem";
 
-//Fonts
-export const normalFont: string = "'Roboto Cn', sans-serif";
+// Fonts
+export const normalFont = "'Roboto Cn', sans-serif";
 
 // Spacing
 export enum sizes {
@@ -33,4 +33,10 @@ export enum sizes {
   desktop_breakpoint = "45rem"
 }
 
-export default { pallete, headerHeight, footerHeight, normalFont, sizes };
+export default {
+  pallete,
+  headerHeight,
+  footerHeight,
+  normalFont,
+  sizes
+};

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page test suite Should render Home Page correctly 1`] = `
+<section
+  class="sc-bdVaJa hrXhkO"
+>
+  <div
+    class="sc-bwzfXH hLZfSd"
+  >
+    <h1
+      class="sc-htpNat jTMDms"
+    >
+      What do you want to do?
+    </h1>
+    <form
+      autocomplete="off"
+      class="sc-bxivhb jOHLsI"
+    >
+      <input
+        class="sc-ifAKCX eZJTGo"
+        data-testid="input"
+        name="toDo"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-EHOje gJehKJ"
+        type="submit"
+      >
+        Decide
+      </button>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`Home Page test suite Should render Home Page with an Answer 1`] = `
+<section
+  class="sc-bdVaJa hrXhkO"
+>
+  <div
+    class="sc-bwzfXH hLZfSd"
+  >
+    <h1
+      class="sc-htpNat jTMDms"
+    >
+      What do you want to do?
+    </h1>
+    <form
+      autocomplete="off"
+      class="sc-bxivhb jOHLsI"
+    >
+      <input
+        class="sc-ifAKCX eZJTGo"
+        data-testid="input"
+        name="toDo"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-EHOje gJehKJ"
+        type="submit"
+      >
+        Decide
+      </button>
+    </form>
+  </div>
+  <div
+    class="sc-bZQynM cWrull"
+  >
+    <h1
+      class="sc-gzVnrw iyudqe"
+    >
+      do it
+    </h1>
+    <img
+      alt="Should You Do It gif"
+      class="sc-htoDjs fzYUog"
+      src="someGif.gif"
+    />
+    <button
+      class="sc-dnqmqq fizNDt"
+    >
+      Clean
+    </button>
+  </div>
+</section>
+`;

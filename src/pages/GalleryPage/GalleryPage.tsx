@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { API_URL } from "../../config";
-import { DecisionsStateData } from "../../store/decisions";
+import { API_URL } from "~/config";
+import { DecisionsStateData } from "~/store/decisions";
 
-import GalleryImage from "../../components/GalleryImage/GalleryImage";
+import GalleryImage from "~/components/GalleryImage/GalleryImage";
 import {
   Container,
   Title,
@@ -13,7 +13,7 @@ import {
   List
 } from "./styled-components";
 
-interface RequestedDecisionsStateData extends Array<DecisionsStateData> {}
+type RequestedDecisionsStateData = Array<DecisionsStateData>;
 
 const Gallery: React.FC = () => {
   const [doIt, setDoIt] = useState<RequestedDecisionsStateData>();

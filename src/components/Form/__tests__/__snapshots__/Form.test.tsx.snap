@@ -2,26 +2,26 @@
 
 exports[`Form test suite Should render Form correctly 1`] = `
 <div
-  class="questionForm"
+  class="sc-bdVaJa hneHDi"
 >
   <h1
-    class="questionForm__title"
+    class="sc-bwzfXH jjfDCS"
   >
     What do you want to do?
   </h1>
   <form
     autocomplete="off"
-    class="questionForm__form"
+    class="sc-htpNat bdTqtb"
   >
     <input
-      class="questionForm__form__input"
+      class="sc-bxivhb iziWZy"
       data-testid="input"
       name="toDo"
       type="text"
       value=""
     />
     <button
-      class="questionForm__form__btn"
+      class="sc-ifAKCX bDTMJK"
       type="submit"
     >
       Decide

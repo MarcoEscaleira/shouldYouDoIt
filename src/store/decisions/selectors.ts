@@ -1,6 +1,10 @@
-import { StoreState } from '..';
-export const getPrint = (state: StoreState) => state.decisions.print;
+import { StoreState } from "..";
+import { DecisionsStateData } from ".";
 
-export const getData = (state: StoreState) => state.decisions.data;
+export const getPrint = (state: StoreState): boolean => state.decisions.print;
 
-export const getOldTextInput = (state: StoreState) => state.decisions.oldTextInput;
+export const getData = (state: StoreState): DecisionsStateData | {} =>
+  state.decisions.data || {};
+
+export const getOldTextInput = (state: StoreState): string =>
+  state.decisions.oldTextInput;

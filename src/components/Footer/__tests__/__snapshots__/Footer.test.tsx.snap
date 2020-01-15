@@ -2,30 +2,27 @@
 
 exports[`Footer test suite Should render Footer correctly 1`] = `
 <footer
-  class="footer"
+  class="sc-bdVaJa bulNMW"
 >
   <p
-    class="footer__message"
+    class="sc-bwzfXH kgMNSL"
   >
     Made with 
     <span
-      class="message--red"
+      class="sc-bxivhb gNxrLP"
     >
       ♥
     </span>
-     by
-     
+     by 
     <a
-      class="message__name"
+      class="sc-htpNat kiXTiO"
       href="https://github.com/marcoescaleira"
     >
       Marco Escaleira
     </a>
-     
-    &
-     
+     & 
     <a
-      class="message__name"
+      class="sc-htpNat kiXTiO"
       href="https://github.com/MarceloSilva00"
     >
       Marcelo Silva

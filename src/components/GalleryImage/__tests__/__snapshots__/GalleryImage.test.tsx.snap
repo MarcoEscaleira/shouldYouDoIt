@@ -3,8 +3,8 @@
 exports[`Gallery Image test suite Should render Gallery Image correctly 1`] = `
 <li>
   <img
-    alt="gallery img"
-    class="gallery__showcase__img"
+    alt="Gallery gif"
+    class="sc-bdVaJa hOKMwW"
     src="myGif.gif"
   />
 </li>

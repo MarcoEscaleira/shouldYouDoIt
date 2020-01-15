@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { UnaryFn, NullaryFn, BinaryFn } from "../../utils/functionalTypes";
-import { actions as decisionsActions, selectors } from "../../store/decisions";
-import { actions as errorModalActions } from "../../store/errorModal";
-import { API_URL } from "../../config";
-import { StoreState } from "../../store";
+import { UnaryFn, NullaryFn, BinaryFn } from "~/utils/functionalTypes";
+import { actions as decisionsActions, selectors } from "~/store/decisions";
+import { actions as errorModalActions } from "~/store/errorModal";
+import { API_URL } from "~/config";
+import { StoreState } from "~/store";
 
 import {
   Container,
@@ -47,7 +47,7 @@ const handleTextInput = (
 };
 
 const handleFormSubmit = (
-  event,
+  event: any,
   resetData: ResetDataType,
   textInput: string,
   oldTextInput: string,
@@ -87,7 +87,7 @@ const Form: React.FC<Props> = ({
       <Container>
         <Title>What do you want to do?</Title>
         <FormContainer
-          onSubmit={e =>
+          onSubmit={(e: any) =>
             handleFormSubmit(
               e,
               resetData,
@@ -104,7 +104,7 @@ const Form: React.FC<Props> = ({
             type="text"
             name="toDo"
             value={textInput}
-            onChange={e => handleTextInput(e.target.value, setTextInput)}
+            onChange={(e: any) => handleTextInput(e.target.value, setTextInput)}
             data-testid="input"
           />
           <Submit type="submit">Decide</Submit>

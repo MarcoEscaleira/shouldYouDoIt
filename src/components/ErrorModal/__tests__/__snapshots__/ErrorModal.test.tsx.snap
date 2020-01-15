@@ -2,24 +2,24 @@
 
 exports[`Error Modal test suite Should hide Error Modal 1`] = `
 <div
-  class="modal modal--invisible"
+  class="sc-bdVaJa jxEdDa"
 >
   <div
-    class="modal__overlay"
+    class="sc-bwzfXH huiBmN"
   >
     <div
-      class="modal__content"
+      class="sc-htpNat dvDDSA"
     >
-      <h3
-        class="modal__title"
+      <h1
+        class="sc-bxivhb gqFfed"
       >
-        Error
-      </h3>
+        Oops!
+      </h1>
       <p
-        class="modal__body"
+        class="sc-ifAKCX cyqsyD"
       />
       <button
-        class="modal__button"
+        class="sc-EHOje gNwhWQ"
       >
         Okay
       </button>
@@ -30,26 +30,26 @@ exports[`Error Modal test suite Should hide Error Modal 1`] = `
 
 exports[`Error Modal test suite Should render Error Modal correctly 1`] = `
 <div
-  class="modal "
+  class="sc-bdVaJa ezOVdl"
 >
   <div
-    class="modal__overlay"
+    class="sc-bwzfXH huiBmN"
   >
     <div
-      class="modal__content"
+      class="sc-htpNat dvDDSA"
     >
-      <h3
-        class="modal__title"
+      <h1
+        class="sc-bxivhb gqFfed"
       >
-        Error
-      </h3>
+        Oops!
+      </h1>
       <p
-        class="modal__body"
+        class="sc-ifAKCX cyqsyD"
       >
         Error modal text
       </p>
       <button
-        class="modal__button"
+        class="sc-EHOje gNwhWQ"
       >
         Okay
       </button>

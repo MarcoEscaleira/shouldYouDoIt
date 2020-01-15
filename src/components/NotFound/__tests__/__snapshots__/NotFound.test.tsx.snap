@@ -2,23 +2,23 @@
 
 exports[`Not Found test suite Should render Not Found correctly 1`] = `
 <div
-  class="notFound"
+  class="sc-bdVaJa cCsnJS"
 >
   <p
-    class="notFound__label"
+    class="sc-bwzfXH hZIatJ"
   >
     404
   </p>
   <p
-    class="notFound__text"
+    class="sc-htpNat sXacK"
   >
     Oops, we can't seem to find the page you're looking for.
   </p>
   <a
-    class="notFound__link"
+    class="sc-bxivhb diCfZq"
     href="/"
   >
-    Go Home
+    Home
   </a>
 </div>
 `;

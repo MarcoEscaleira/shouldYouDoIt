@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import { StoreState } from "store";
-import loadingGif from "../../assets/gifs/loading.gif";
+import { StoreState } from "~store";
 import { Container, Title, Image, CleanButton } from "./styled-components";
-import { actions, selectors, DecisionsStateData } from "../../store/decisions";
-// TODO: Check import export of types not working
-import { ResetData } from "../../store/decisions/actions";
+import { actions, selectors, DecisionsStateData } from "~store/decisions";
+import { NullaryFn } from "~utils/functionalTypes";
+// @ts-ignore
+import loadingGif from "~assets/gifs/loading.gif";
 
 export interface Props {
-  resetData: ResetData;
+  resetData: NullaryFn<void>;
   data: DecisionsStateData;
 }
 

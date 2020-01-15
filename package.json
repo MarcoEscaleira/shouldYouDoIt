@@ -4,7 +4,6 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "assets": "^3.0.1",
     "components": "^0.1.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
@@ -20,9 +19,13 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@testing-library/dom": "^6.11.0",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^8.0.3",
+    "@types/jest": "^24.0.25",
     "@types/lodash": "^4.14.149",
     "@types/react": "^16.9.17",
     "@types/react-redux": "^7.1.5",
@@ -31,49 +34,49 @@
     "@types/styled-components": "^4.4.2",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "2.20.0",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "7.17.0",
+    "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "husky": "^4.0.7",
-    "jest-dom": "^4.0.0",
+    "jest": "^24.9.0",
+    "jest-transform-file": "^1.1.1",
     "lint-staged": "^9.5.0",
     "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
+    "react-test-renderer": "^16.12.0",
     "redux-mock-store": "^1.5.4",
+    "ts-jest": "^24.3.0",
     "typescript": "^3.7.4"
   },
   "scripts": {
     "start:dev": "NODE_ENV=development parcel src/index.html -p 5000",
     "build": "parcel build src/index.html",
-    "test": "jest",
-    "lint:ts": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "jest --env=jsdom",
+    "lint:ts": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix && tsc --noEmit",
     "lintPretty": "pretty-quick",
     "lint": "run-p --print-label lint:*",
     "pre-commit-hook": "run-s \"lintPretty\" \"lint:js --fix\" \"test\" \"git add\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "pretty-quick",
       "eslint --fix",
+      "jest --env=jsdom --no-coverage",
       "git add"
     ]
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }

@@ -2,42 +2,42 @@
 
 exports[`Header test suite Should render Header correctly 1`] = `
 <header
-  class="header"
+  class="sc-bdVaJa gJeTSY"
 >
   <nav
-    class="header__nav"
+    class="sc-bwzfXH bKpTzt"
   >
     <a
       aria-current="page"
-      class="nav__title active"
+      class="sc-ifAKCX djbGiO active"
       href="/"
     >
       Should You 
       <span
-        class="nav__title__span"
+        class="sc-EHOje efxguo"
       >
         Do It
       </span>
     </a>
     <ul
-      class="nav__ul"
+      class="sc-htpNat cixthU"
     >
       <li
-        class="nav__ul__li"
+        class="sc-bxivhb fcqCpQ"
       >
         <a
           aria-current="page"
-          class="navLink isActive"
+          class="sc-ifAKCX cDuLYn activeHeaderLink"
           href="/"
         >
           Home
         </a>
       </li>
       <li
-        class="nav__ul__li"
+        class="sc-bxivhb fcqCpQ"
       >
         <a
-          class="navLink"
+          class="sc-ifAKCX cDuLYn"
           href="/gallery"
         >
           Gallery
