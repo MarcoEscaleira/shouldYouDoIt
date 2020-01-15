@@ -21,7 +21,7 @@ export const footerHeight = "5rem";
 export const footerDesktopHeight = "7rem";
 
 // Fonts
-export const normalFont = "'Roboto Cn', sans-serif";
+export const normalFont = "'Lato', sans-serif";
 
 // Spacing
 export enum sizes {

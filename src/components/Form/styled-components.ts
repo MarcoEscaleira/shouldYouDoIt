@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sizes, pallete } from "~/styles/_settings";
+import { sizes, pallete, normalFont } from "~/styles/_settings";
 
 export const Container = styled.div`
   position: relative;
@@ -7,6 +7,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 30rem;
+  font-family: ${normalFont};
 
   @media (min-width: ${sizes.desktop_breakpoint}) {
     width: 50rem;
@@ -39,6 +40,7 @@ export const Input = styled.input`
   padding: ${sizes.s};
   margin-bottom: ${sizes.s};
   outline: none;
+  font-family: ${normalFont};
 `;
 
 export const Submit = styled.button`

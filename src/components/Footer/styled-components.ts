@@ -3,7 +3,8 @@ import {
   sizes,
   pallete,
   footerHeight,
-  footerDesktopHeight
+  footerDesktopHeight,
+  normalFont
 } from "~/styles/_settings";
 
 export const Container = styled.footer`
@@ -12,6 +13,7 @@ export const Container = styled.footer`
   align-items: center;
   width: 100%;
   height: ${footerHeight};
+  font-family: ${normalFont};
 
   @media (min-width: ${sizes.desktop_breakpoint}) {
     height: ${footerDesktopHeight};
