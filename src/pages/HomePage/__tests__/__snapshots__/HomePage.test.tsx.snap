@@ -10,7 +10,7 @@ exports[`Home Page test suite Should render Home Page correctly 1`] = `
     <h1
       class="sc-htpNat jTMDms"
     >
-      What do you want to do??
+      What do you want to do?
     </h1>
     <form
       autocomplete="off"
@@ -44,7 +44,7 @@ exports[`Home Page test suite Should render Home Page with an Answer 1`] = `
     <h1
       class="sc-htpNat jTMDms"
     >
-      What do you want to do??
+      What do you want to do?
     </h1>
     <form
       autocomplete="off"
