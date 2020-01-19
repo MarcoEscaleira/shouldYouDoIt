@@ -5,6 +5,8 @@
   "private": false,
   "dependencies": {
     "lodash": "^4.17.15",
+    "netlify": "^3.0.0",
+    "netlify-cli": "^2.30.0",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.4",
