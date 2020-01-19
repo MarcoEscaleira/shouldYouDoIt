@@ -2,7 +2,7 @@
 
 exports[`Form test suite Should render Form correctly 1`] = `
 <div
-  class="sc-bdVaJa hneHDi"
+  class="sc-bdVaJa dKdJKp"
 >
   <h1
     class="sc-bwzfXH jjfDCS"
@@ -14,7 +14,7 @@ exports[`Form test suite Should render Form correctly 1`] = `
     class="sc-htpNat bdTqtb"
   >
     <input
-      class="sc-bxivhb iziWZy"
+      class="sc-bxivhb cNpncz"
       data-testid="input"
       name="toDo"
       type="text"

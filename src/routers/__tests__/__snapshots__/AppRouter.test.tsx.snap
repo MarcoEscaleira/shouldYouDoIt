@@ -5,7 +5,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
   class="sc-jDwBTQ gozLLG"
 >
   <header
-    class="sc-ckVGcZ fZFkoE"
+    class="sc-ckVGcZ cjRLKI"
   >
     <nav
       class="sc-jKJlTe hZuZfW"
@@ -53,7 +53,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
     class="sc-bdVaJa hrXhkO"
   >
     <div
-      class="sc-bwzfXH hLZfSd"
+      class="sc-bwzfXH iAtwKB"
     >
       <h1
         class="sc-htpNat jTMDms"
@@ -65,7 +65,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
         class="sc-bxivhb jOHLsI"
       >
         <input
-          class="sc-ifAKCX eZJTGo"
+          class="sc-ifAKCX kSnyJN"
           data-testid="input"
           name="toDo"
           type="text"
