@@ -53,9 +53,6 @@ workflows:
 jobs:
   build:
     executor: node-executor
-    environment:
-      NETLIFY_SITE_ID: ec2ba6e2-57f6-4810-bc5f-b364b851a158
-      NETLIFY_ACCESS_TOKEN: 3d88dddd394725d0f0fadaa3d683a12f5060b4a56f9eb703181083195da797db
     working_directory: ~/project
     steps:
       - parcel-build
@@ -64,9 +61,6 @@ jobs:
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=dist
   release:
     executor: node-executor
-    environment:
-      NETLIFY_SITE_ID: ec2ba6e2-57f6-4810-bc5f-b364b851a158
-      NETLIFY_ACCESS_TOKEN: 3d88dddd394725d0f0fadaa3d683a12f5060b4a56f9eb703181083195da797db
     working_directory: ~/project
     steps:
       - parcel-build

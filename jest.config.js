@@ -1,6 +1,7 @@
 module.exports = {
   preset: "ts-jest",
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|tsx?)$",
   transform: {
     "\\.(jpg|jpeg|png|gif|webp|svg)$": "jest-transform-file"
   },

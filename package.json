@@ -61,7 +61,7 @@
   "scripts": {
     "start:dev": "NODE_ENV=development parcel src/index.html -p 5000",
     "build": "parcel build src/index.html",
-    "test": "jest --env=jsdom",
+    "test": "jest",
     "lint:ts": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix && tsc --noEmit",
     "lintPretty": "pretty-quick",
     "lint": "run-p --print-label lint:*",
@@ -76,7 +76,7 @@
     "*.{js,ts,tsx}": [
       "pretty-quick",
       "eslint --fix",
-      "jest --env=jsdom --no-coverage",
+      "jest",
       "git add"
     ]
   }

@@ -58,7 +58,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
       <h1
         class="sc-htpNat jTMDms"
       >
-        What do you want to do?
+        What do you want to do??
       </h1>
       <form
         autocomplete="off"
