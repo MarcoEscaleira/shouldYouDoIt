@@ -4,6 +4,35 @@ executors:
     docker:
       - image: circleci/node:10
 commands:
+  tests:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - save_cache:
+          key: yarn-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Running lint
+          command: yarn lint:ts
+
+      - run:
+          name: Running tests
+          command: yarn test
+
+      - save_cache:
+          key: yarn-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./public
   parcel-build:
     steps:
       - checkout
@@ -12,7 +41,7 @@ commands:
             - yarn-cache-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
-          command: yarn install && npm rebuild
+          command: yarn install
       - save_cache:
           key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
@@ -55,7 +84,7 @@ jobs:
     executor: node-executor
     working_directory: ~/project
     steps:
-      - parcel-build
+      - tests
   release:
     executor: node-executor
     working_directory: ~/project
