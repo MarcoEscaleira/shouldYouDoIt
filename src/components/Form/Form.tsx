@@ -26,8 +26,8 @@ type Props = {
   openErrorModal: UnaryFn<string, void>;
 };
 
-const request = async (textInput: string, setData: SetDataType) => {
-  const response = await fetch(`${API_URL}/?search=${textInput}`, {
+export const request = async (textInput: string, setData: SetDataType) => {
+  const response = await fetch(`${API_URL}/?search=${textInput.trim()}`, {
     headers: {
       "Content-Type": "application/json"
     }
@@ -37,16 +37,16 @@ const request = async (textInput: string, setData: SetDataType) => {
   setData(data, textInput);
 };
 
-const handleTextInput = (
+export const handleTextInput = (
   textInput: string,
   setTextInput: UnaryFn<string, void>
 ) => {
-  if (!textInput || /^[a-z\d\-_\s]+$/i.test(textInput)) {
-    setTextInput(textInput.trim());
+  if (!textInput || /^[a-z][a-z\s]*$/.test(textInput)) {
+    setTextInput(textInput);
   }
 };
 
-const handleFormSubmit = (
+export const handleFormSubmit = (
   event: any,
   resetData: ResetDataType,
   textInput: string,

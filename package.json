@@ -4,7 +4,6 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "components": "^0.1.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
@@ -16,7 +15,6 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "store": "^2.0.12",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
