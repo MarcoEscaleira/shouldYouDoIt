@@ -56,9 +56,6 @@ jobs:
     working_directory: ~/project
     steps:
       - parcel-build
-      - run:
-          name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=dist
   release:
     executor: node-executor
     working_directory: ~/project
