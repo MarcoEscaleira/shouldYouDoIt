@@ -1,4 +1,3 @@
-// @ts-nocheck
 import styled from "styled-components";
 import { sizes, pallete } from "~styles/_settings";
 

@@ -5,7 +5,7 @@ exports[`Form test suite Should render Form correctly 1`] = `
   class="sc-bdVaJa dKdJKp"
 >
   <h1
-    class="sc-bwzfXH jjfDCS"
+    class="sc-bwzfXH dOrfze"
   >
     What do you want to do?
   </h1>
@@ -14,14 +14,14 @@ exports[`Form test suite Should render Form correctly 1`] = `
     class="sc-htpNat bdTqtb"
   >
     <input
-      class="sc-bxivhb cNpncz"
+      class="sc-bxivhb lmgpwm"
       data-testid="input"
       name="toDo"
       type="text"
       value=""
     />
     <button
-      class="sc-ifAKCX bDTMJK"
+      class="sc-ifAKCX fgFybp"
       type="submit"
     >
       Decide

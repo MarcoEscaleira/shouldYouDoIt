@@ -27,7 +27,7 @@ exports[`Header test suite Should render Header correctly 1`] = `
       >
         <a
           aria-current="page"
-          class="sc-ifAKCX cDuLYn activeHeaderLink"
+          class="sc-ifAKCX letOPs activeHeaderLink"
           href="/"
         >
           Home
@@ -37,7 +37,7 @@ exports[`Header test suite Should render Header correctly 1`] = `
         class="sc-bxivhb fcqCpQ"
       >
         <a
-          class="sc-ifAKCX cDuLYn"
+          class="sc-ifAKCX letOPs"
           href="/gallery"
         >
           Gallery

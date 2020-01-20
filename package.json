@@ -10,6 +10,7 @@
     "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
@@ -55,6 +56,7 @@
     "react-test-renderer": "^16.12.0",
     "redux-mock-store": "^1.5.4",
     "ts-jest": "^24.3.0",
+    "tsconfig-paths-jest": "^0.0.1",
     "typescript": "^3.7.4"
   },
   "scripts": {
@@ -63,8 +65,7 @@
     "test": "jest",
     "lint:ts": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix && tsc --noEmit",
     "lintPretty": "pretty-quick",
-    "lint": "run-p --print-label lint:*",
-    "pre-commit-hook": "run-s \"lintPretty\" \"lint:js --fix\" \"test\" \"git add\""
+    "lint": "run-p --print-label lint:*"
   },
   "husky": {
     "hooks": {
@@ -72,10 +73,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{ts,tsx}": [
       "pretty-quick",
-      "eslint --fix",
-      "jest",
+      "yarn lint:ts",
+      "yarn test",
       "git add"
     ]
   }

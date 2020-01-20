@@ -28,7 +28,9 @@ exports[`Answer test suite Should clean data after clicking on Clean btn 2`] = `
 >
   <h1
     class="sc-bwzfXH kGFWur"
-  />
+  >
+    Prepairing your answer...
+  </h1>
   <img
     alt="Should You Do It gif"
     class="sc-htpNat giwlJC"
@@ -48,7 +50,9 @@ exports[`Answer test suite Should render Answer correctly 1`] = `
 >
   <h1
     class="sc-bwzfXH kGFWur"
-  />
+  >
+    Prepairing your answer...
+  </h1>
   <img
     alt="Should You Do It gif"
     class="sc-htpNat giwlJC"

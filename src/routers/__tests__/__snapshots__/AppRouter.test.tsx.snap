@@ -30,7 +30,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
         >
           <a
             aria-current="page"
-            class="sc-kEYyzF gZsYJU activeHeaderLink"
+            class="sc-kEYyzF RBhJv activeHeaderLink"
             href="/"
           >
             Home
@@ -40,7 +40,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
           class="sc-hMqMXs gcxcSR"
         >
           <a
-            class="sc-kEYyzF gZsYJU"
+            class="sc-kEYyzF RBhJv"
             href="/gallery"
           >
             Gallery
@@ -56,7 +56,7 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
       class="sc-bwzfXH iAtwKB"
     >
       <h1
-        class="sc-htpNat jTMDms"
+        class="sc-htpNat kphtVz"
       >
         What do you want to do?
       </h1>
@@ -65,14 +65,14 @@ exports[`App Router test suite Should render App Router correctly 1`] = `
         class="sc-bxivhb jOHLsI"
       >
         <input
-          class="sc-ifAKCX kSnyJN"
+          class="sc-ifAKCX syZea"
           data-testid="input"
           name="toDo"
           type="text"
           value=""
         />
         <button
-          class="sc-EHOje gJehKJ"
+          class="sc-EHOje iebUFb"
           type="submit"
         >
           Decide

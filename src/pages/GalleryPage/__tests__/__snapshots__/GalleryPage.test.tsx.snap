@@ -39,3 +39,43 @@ exports[`Gallery Page test suite Should render Gallery Page correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Gallery Page test suite Should render Gallery Page with data 1`] = `
+<div
+  class="sc-bwzfXH eiJdVC gallery"
+>
+  <h1
+    class="sc-htpNat gLJjFZ gallery__title"
+  >
+    Gallery
+  </h1>
+  <div
+    class="sc-bxivhb bCaAXt gallery__body"
+  >
+    <div
+      class="sc-bZQynM bOrPFB gallery__doIt"
+    >
+      <h2
+        class="sc-EHOje cJkjKf showcase__title"
+      >
+        Do It
+      </h2>
+      <ul
+        class="sc-ifAKCX kxDABR gallery__showcase"
+      />
+    </div>
+    <div
+      class="sc-gzVnrw ibZhkv gallery__dontDoIt"
+    >
+      <h2
+        class="sc-EHOje cJkjKf showcase__title"
+      >
+        Don't Do It
+      </h2>
+      <ul
+        class="sc-ifAKCX kxDABR gallery__showcase"
+      />
+    </div>
+  </div>
+</div>
+`;

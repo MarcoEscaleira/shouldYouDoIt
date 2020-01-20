@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { API_URL } from "~/config";
 import { DecisionsStateData } from "~/store/decisions";
 
-import GalleryImage from "~/components/GalleryImage/GalleryImage";
+import GalleryImage from "~components/GalleryImage/GalleryImage";
 import {
   Container,
   Title,

@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { Container } from "./styled-components";
 
-import Form from "~/components/Form/Form";
-import Answer from "~/components/Answer/Answer";
-import ErrorModal from "~/components/ErrorModal/ErrorModal";
+import Form from "~components/Form/Form";
+import Answer from "~components/Answer/Answer";
+import ErrorModal from "~components/ErrorModal/ErrorModal";
 import { StoreState } from "~/store/";
 import { getPrint } from "~/store/decisions/selectors";
 import { getErrorModal } from "~/store/errorModal/selectors";
