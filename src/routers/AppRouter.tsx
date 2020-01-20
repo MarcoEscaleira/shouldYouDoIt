@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import HomePage from "~/pages/HomePage/HomePage";
-import GalleryPage from "~/pages/GalleryPage/GalleryPage";
-import Header from "~/components/Header/Header";
-import Footer from "~/components/Footer/Footer";
-import NotFound from "~/components/NotFound/NotFound";
+import HomePage from "~pages/HomePage/HomePage";
+import GalleryPage from "~pages/GalleryPage/GalleryPage";
+import Header from "~components/Header/Header";
+import Footer from "~components/Footer/Footer";
+import NotFound from "~components/NotFound/NotFound";
 
 import { AppContainer } from "./styled-components";
 

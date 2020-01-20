@@ -14,7 +14,7 @@ export interface Props {
 
 const Answer: React.FC<Props> = ({ resetData, data: { msg, img } }) => (
   <Container>
-    <Title>{msg}</Title>
+    <Title>{msg || "Prepairing your answer..."}</Title>
     <Image src={img || loadingGif} alt="Should You Do It gif" />
     <CleanButton onClick={resetData}>Clean</CleanButton>
   </Container>

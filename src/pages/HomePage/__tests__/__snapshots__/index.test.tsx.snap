@@ -8,7 +8,7 @@ exports[`Home Page test suite Should render Home Page correctly 1`] = `
     class="sc-bwzfXH iAtwKB"
   >
     <h1
-      class="sc-htpNat jTMDms"
+      class="sc-htpNat kphtVz"
     >
       What do you want to do?
     </h1>
@@ -17,14 +17,14 @@ exports[`Home Page test suite Should render Home Page correctly 1`] = `
       class="sc-bxivhb jOHLsI"
     >
       <input
-        class="sc-ifAKCX kSnyJN"
+        class="sc-ifAKCX syZea"
         data-testid="input"
         name="toDo"
         type="text"
         value=""
       />
       <button
-        class="sc-EHOje gJehKJ"
+        class="sc-EHOje iebUFb"
         type="submit"
       >
         Decide
@@ -42,7 +42,7 @@ exports[`Home Page test suite Should render Home Page with an Answer 1`] = `
     class="sc-bwzfXH iAtwKB"
   >
     <h1
-      class="sc-htpNat jTMDms"
+      class="sc-htpNat kphtVz"
     >
       What do you want to do?
     </h1>
@@ -51,14 +51,14 @@ exports[`Home Page test suite Should render Home Page with an Answer 1`] = `
       class="sc-bxivhb jOHLsI"
     >
       <input
-        class="sc-ifAKCX kSnyJN"
+        class="sc-ifAKCX syZea"
         data-testid="input"
         name="toDo"
         type="text"
         value=""
       />
       <button
-        class="sc-EHOje gJehKJ"
+        class="sc-EHOje iebUFb"
         type="submit"
       >
         Decide

@@ -74,6 +74,7 @@ export const Link = styled(NavLink)<HeaderLink>`
 
     @media (min-width: ${sizes.desktop_breakpoint}) {
       font-size: 1.3rem;
+      margin: 0 2rem;
     }
   `}
 

@@ -1,5 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+// @ts-ignore
+import { fadeInLeft, fadeInRight, fadeInUp } from "react-animations";
 import { sizes, pallete, normalFont } from "~/styles/_settings";
+
+const titleAnimation = keyframes`${fadeInUp}`;
+
+const inputAnimation = keyframes`${fadeInLeft}`;
+
+const submitAnimation = keyframes`${fadeInRight}`;
 
 export const Container = styled.div`
   position: relative;
@@ -17,6 +25,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: ${pallete.sixth_light};
   font-size: 2.5rem;
+  animation: 2s ${titleAnimation};
 
   @media (min-width: ${sizes.desktop_breakpoint}) {
     font-size: 3rem;
@@ -41,6 +50,7 @@ export const Input = styled.input`
   margin-bottom: ${sizes.s};
   outline: none;
   font-family: ${normalFont};
+  animation: 1s ${inputAnimation};
 `;
 
 export const Submit = styled.button`
@@ -55,4 +65,5 @@ export const Submit = styled.button`
   letter-spacing: 0.05rem;
   margin-bottom: 1.5rem;
   outline: none;
+  animation: 1s ${submitAnimation};
 `;
