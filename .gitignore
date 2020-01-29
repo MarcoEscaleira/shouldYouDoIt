@@ -25,3 +25,5 @@ yarn-error.log*
 .cache
 
 /dist
+# Local Netlify folder
+.netlify
