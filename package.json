@@ -5,7 +5,6 @@
   "private": false,
   "dependencies": {
     "lodash": "^4.17.15",
-    "netlify-cli": "^2.30.0",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.4",
@@ -17,7 +16,8 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^5.0.0",
+    "surge": "^0.21.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
@@ -57,15 +57,16 @@
     "redux-mock-store": "^1.5.4",
     "ts-jest": "^24.3.0",
     "tsconfig-paths-jest": "^0.0.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start:dev": "NODE_ENV=development parcel src/index.html -p 5000",
     "build": "parcel build src/index.html",
+    "deploy": "surge -p dist/ --domain shouldyoudoit.surge.sh",
     "test": "jest",
+    "lint": "run-p --print-label lint:*",
     "lint:ts": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix && tsc --noEmit",
-    "lintPretty": "pretty-quick",
-    "lint": "run-p --print-label lint:*"
+    "lintPretty": "pretty-quick"
   },
   "husky": {
     "hooks": {

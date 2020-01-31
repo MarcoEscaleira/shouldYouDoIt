@@ -1,0 +1,46 @@
+# Docker image
+image: node:10
+
+before_script:
+  - yarn
+
+# Tests Job
+tests:
+  stage: test
+  only:
+    - develop
+    - master
+  script:
+    - yarn lint
+    - yarn test
+
+# Build Job
+parcel-build:
+  stage: build
+  only:
+    - master
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - dist/
+
+# Deploy Job
+deploy-surge:
+  stage: deploy
+  only:
+    - master
+  script:
+    - yarn deploy
+
+# Order of stages running
+stages:
+  - test
+  - build
+  - deploy
+
+# Cache
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
